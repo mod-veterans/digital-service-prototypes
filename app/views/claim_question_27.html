@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_26">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+ <span class="govuk-caption-xl">Question 27 of 43</span>
+        <h1 class="govuk-heading-xl">When were you downgraded?</h1>
+
+          <form class="form" action="claim_question_28" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Date from
+              </legend>
+              <span id="expiry-hint" class="govuk-hint">
+                For example, 31 3 1980
+              </span>
+              <div class="govuk-date-input" id="expiry">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="downgraded-day-from" name="downgraded-day-from" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['downgraded-day-from']}}>
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="downgraded-month-from" name="downgraded-month-from" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['downgraded-month-from']}}>
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="downgraded-year-from" name="downgraded-year-from" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['downgraded-year-from']}}>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Date to
+              </legend>
+              <span id="expiry-hint" class="govuk-hint">
+                For example, 31 3 1980
+              </span>
+              <div class="govuk-date-input" id="expiry">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="downgraded-day-to" name="downgraded-day-to" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['downgraded-day-to']}}>
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="downgraded-month-to" name="downgraded-month-to" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['downgraded-month-to']}}>
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="downgraded-year-to" name="downgraded-year-to" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['downgraded-year-to']}}>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

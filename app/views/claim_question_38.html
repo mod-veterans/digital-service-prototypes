@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_37">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+  <form class="form" action="claim_question_39" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+<span class="govuk-caption-xl">Question 38 of 43</span>
+            <h1 class="govuk-fieldset__heading">
+              When is this due to take place?
+            </h1>
+          </legend>
+          <span id="passport-issued-hint" class="govuk-hint">
+            For example, 12 11 2007
+          </span>
+          <div class="govuk-date-input" id="surgery-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="surgery-day" name="surgery-day" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['surgery-day']}}>
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="surgery-month" name="surgery-month" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['surgery-month']}}>
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="surgery-year" name="surgery-year" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['surgery-year']}}>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

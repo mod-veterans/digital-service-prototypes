@@ -1,0 +1,39 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="service_details_question_1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="service_details_question_3" method="post">
+
+        <span class="govuk-caption-xl">Question 2 of 9</span>
+      <h1 class="govuk-heading-xl">What is your service number?</h1>
+
+      <div class="govuk-form-group">
+  <label class="govuk-label" for="service-number">
+  </label>
+  <input class="govuk-input" id="service-number" name="service-number" type="text" value={{data['service-number']}}>
+
+
+</div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

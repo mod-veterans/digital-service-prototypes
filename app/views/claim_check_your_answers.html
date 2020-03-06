@@ -1,0 +1,776 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_43">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers to the claim and medical details section</h1>
+
+      <h2 class="govuk-heading-m"> Part A: Condition, injury or illness details</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is a condition, injury or illness you are claiming for?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['condition-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_1a">
+              Change
+              <span class="govuk-visually-hidden"> What is a condition, injury or illness you are claiming for?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is the medically confirmed diagnosis if known?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['diagnosis-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_1b">
+              Change
+              <span class="govuk-visually-hidden"> What is the medically confirmed diagnosis if known?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What was the onset date of this condition/injury or illness?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['onset-day-1'] }} {{ data['onset-month-1'] }}  {{ data['onset-year-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_1c">
+              Change
+              <span class="govuk-visually-hidden">Onset date</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Please explain why you feel it was caused by service
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['more-detail-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_1d">
+              Change
+              <span class="govuk-visually-hidden">Please explain why you feel it was caused by service</span>
+            </a>
+          </dd>
+        </div>
+        <br>
+
+</dl>
+
+
+<h2 class="govuk-heading-m">Part B: Accident or incident details</h2>
+
+<dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What was the date of the incident/accident?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['incident-day-1'] }} {{ data['incident-month-1'] }} {{ data['incident-year-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_2">
+              Change
+              <span class="govuk-visually-hidden">incident date</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Where were you when you were injured?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['location-details'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_3">
+              Change
+              <span class="govuk-visually-hidden">location details</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What were you doing at the time?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['activity-details']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_4">
+              Change
+              <span class="govuk-visually-hidden">Activity details</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Did you report the injury?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['how-contacted']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_5">
+              Change
+              <span class="govuk-visually-hidden">reported</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Were you in an acting rank at the time?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['acting-rank']}} {{data['acting-rank-answer']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_6">
+              Change
+              <span class="govuk-visually-hidden">Acting rank</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Did you complete an incident report form?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['incident-report']}} {{data['incident-report-answer']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_7">
+              Change
+              <span class="govuk-visually-hidden">Incident report form</span>
+            </a>
+          </dd>
+        </div>
+
+</dl>
+<br>
+<h2 class="govuk-heading-m">Part C: Road Accident</h2>
+
+<dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Was this a road traffic accident?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['road-traffic-accident']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_8">
+              Change
+              <span class="govuk-visually-hidden">Road accident</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What was the reason for your journey?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['journey-reason']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_9">
+              Change
+              <span class="govuk-visually-hidden">Journey reason</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What was the route you took from start to the final destination?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['road-route']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_10">
+              Change
+              <span class="govuk-visually-hidden">Road route</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Were you on authorised leave at the time?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['authorised-leave']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_11">
+              Change
+              <span class="govuk-visually-hidden">Authorised leave</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Were the police involved?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['police']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_12">
+              Change
+              <span class="govuk-visually-hidden">Police involvement</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Were their any witnesses involved?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['witness']}} {{data['witness-details-car']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_13">
+              Change
+              <span class="govuk-visually-hidden">Witnesses</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+      <br>
+      <h2 class="govuk-heading-m">Part D: Sport, adventure or physical traning accident</h2>
+
+      <dl class="govuk-summary-list ">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Was this accident due to sport, adventure training or physical training?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['activity-accident']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="claim_question_14">
+                    Change
+                    <span class="govuk-visually-hidden">Sporting accident</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What was the activity?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['activity-detail']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="claim_question_15">
+                    Change
+                    <span class="govuk-visually-hidden">Activity</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Was the activity organised by the armed forces?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['organised-by-AF']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="claim_question_16">
+                    Change
+                    <span class="govuk-visually-hidden">Organised by AF</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Were you representing your unit at the time?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['representing-unit']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="claim_question_17">
+                    Change
+                    <span class="govuk-visually-hidden">Representing unit</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Were any witnesses involved?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['witness-activity']}} {{data['witness-activity-details']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="claim_question_18">
+                    Change
+                    <span class="govuk-visually-hidden">Witness to activity</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Please provide details about the treatment you were given
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{data['treatment-activity']}} {{data['treatment-details']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="claim_question_19">
+                    Change
+                    <span class="govuk-visually-hidden">Treatment details</span>
+                  </a>
+                </dd>
+              </div>
+
+</dl>
+<br>
+<h2 class="govuk-heading-m">Part E: Injury and illness started over a period of time</h2>
+
+<dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Was this condition, injury or illness started over a period of time as opposed to a specific incident?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['period-of-time']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_20">
+              Change
+              <span class="govuk-visually-hidden">Period of time</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            When do you feel the injury/illness/condition started?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['date-started-day']}} {{data['date-started-month']}} {{data['date-started-year']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_21">
+              Change
+              <span class="govuk-visually-hidden">When it started</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you think the injury/illness/condition was due to any of the following?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['Trade']}} <br/> {{data['Duties']}}<br/>  {{data['Training']}}<br/> {{data['Cold']}} <br/> {{data['Heat']}} <br/> {{data['Noise']}} <br/> {{data['Vibration']}}  <br/> {{data['Chemical, biological or hazadous substance']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_22">
+              Change
+              <span class="govuk-visually-hidden">Checkboxes</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            If exposure to chemical, biological or hazardous substances, what were they?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['substance-details']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_22">
+              Change
+              <span class="govuk-visually-hidden">Checkboxes</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            When were you first exposed to this?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['first-exposed-day']}} {{data['first-exposed-month']}} {{data['first-exposed-year']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_23">
+              Change
+              <span class="govuk-visually-hidden">exposed</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How long were exposed to this for?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['exposure-time']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_24">
+              Change
+              <span class="govuk-visually-hidden">exposed</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            When did you first seek medical help?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['seek-day']}} {{data['seek-month']}} {{data['seek-year']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_25">
+              Change
+              <span class="govuk-visually-hidden">medical help</span>
+            </a>
+          </dd>
+        </div>
+
+</dl>
+<br>
+<h2 class="govuk-heading-m">Part F: Downgrading</h2>
+
+<dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Were you downgraded for this condition, illness or injury?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['downgraded-yes']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_26">
+              Change
+              <span class="govuk-visually-hidden">Downgraded</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            When were you downgraded?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            From: {{data['downgraded-day-from']}} {{data['downgraded-month-from']}} {{data['downgraded-year-from']}} To: {{data['downgraded-day-to']}} {{data['downgraded-month-to']}} {{data['downgraded-year-to']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_27">
+              Change
+              <span class="govuk-visually-hidden">Downgraded when</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What category were you downgraded to?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['category']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_28">
+              Change
+              <span class="govuk-visually-hidden">Downgraded category</span>
+            </a>
+          </dd>
+        </div>
+
+
+        </dl>
+        <br>
+        <h2 class="govuk-heading-m">Medical and treatment details</h2>
+
+        <dl class="govuk-summary-list ">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Who did you first seek medical attention from?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{data['name-medical-assistance']}} <br/> {{data['first-seek-medical-line-1']}} <br/> {{data['first-seek-medical-line-2']}} <br/> {{data['first-seek-medical-line-3']}} <br/> {{data['first-seek-medical-line-4']}} <br/>  {{data['first-seek-medical-line-5']}} <br/> {{data['first-seek-medical-number']}} <br/>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_29">
+                      Change
+                      <span class="govuk-visually-hidden">First medical attention</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What specific medical diagnosis have you been given?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{data['medical-diagnosis-1']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_30">
+                      Change
+                      <span class="govuk-visually-hidden">Medical diagnosis</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Which medical practitioner gave this diagnosis?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{data['name-medical-assistance-2']}} <br/> {{data['practitioner-diagnosis-line-1']}} <br/>  {{data['practitioner-diagnosis-line-2']}} <br/>  {{data['practitioner-diagnosis-line-3']}}  <br/> {{data['practitioner-diagnosis-line-4']}} <br/>  {{data['practitioner-diagnosis-line-5']}} <br/>  {{data['practitioner-diagnosis-number']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_31">
+                      Change
+                      <span class="govuk-visually-hidden">Medical practitioner diagnosis</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Did you recieve any hospital treatment for the injury, illness or condition?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['hosp-treatment']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_32">
+                      Change
+                      <span class="govuk-visually-hidden">Hospital treatment</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What injury or illness did you have treated?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['what-injury-treated']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_33">
+                      Change
+                      <span class="govuk-visually-hidden">What injury or illness did you have treated</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What were the details of this hospital?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['name-hosp-treatment']}} <br/> {{data['hosp-treatment-line-1']}} <br/> {{data['hosp-treatment-line-2']}} <br/> {{data['hosp-treatment-line-3']}} <br/> {{data['hosp-treatment-line-4']}} <br/> {{data['hosp-treatment-line-5']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_34">
+                      Change
+                      <span class="govuk-visually-hidden">What were the details of this hospital treatment</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What is the hospital record number?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['hosp-record-number']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_35">
+                      Change
+                      <span class="govuk-visually-hidden">Hospital record number</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What were your treatment dates?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+              From:  {{data['from-treatment-day']}} {{data['from-treatment-month']}} {{data['from-treatment-year']}} To: {{data['to-treatment-day']}} {{data['to-treatment-month']}} {{data['to-treatment-year']}}
+
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_36">
+                      Change
+                      <span class="govuk-visually-hidden">Treatment dates</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Are you on a waiting list for surgery for the condition/injury/illness you are claiming?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['awaiting-surgery']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_37">
+                      Change
+                      <span class="govuk-visually-hidden">Waiting list for surgery</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    When is this due to take place?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['surgery-day']}} {{data['surgery-month']}} {{data['surgery-year']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_38">
+                      Change
+                      <span class="govuk-visually-hidden">When is this due to take place?</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Please tell us the name and address of the hospital where this is due to take place
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['awaiting-surgery-line-1']}} <br/> {{data['awaiting-surgery-line-2']}} <br/>  {{data['awaiting-surgery-line-3']}} <br/>  {{data['awaiting-surgery-line-4']}} <br/>  {{data['awaiting-surgery-line-5']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_39">
+                      Change
+                      <span class="govuk-visually-hidden">Name and address of hosp</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Are you waiting for or have you received any other type of treatment for the condition/injury/illness you are claiming for?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['awaiting-treatment']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_40">
+                      Change
+                      <span class="govuk-visually-hidden">awaiting treatment</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What is/was the type of treatment?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['awaiting-treatment-type']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_41">
+                      Change
+                      <span class="govuk-visually-hidden">other treatment</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Please provide the full address of where you had this treatment
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['other-treatment-line-1']}} <br/> {{data['other-treatment-line-2']}} <br/>  {{data['other-treatment-line-3']}} <br/>  {{data['other-treatment-line-4']}} <br/>  {{data['other-treatment-line-5']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_42">
+                      Change
+                      <span class="govuk-visually-hidden">Other treatment address</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What is the name and address of your current Medical Officer or GP?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                {{data['medical-officer-name']}} <br/> {{data['medical-officer-line-1']}} <br/> {{data['medical-officer-line-2']}} <br/>  {{data['medical-officer-line-3']}} <br/>  {{data['medical-officer-line-4']}} <br/>  {{data['medical-officer-line-5']}} <br/>  {{data['medical-officer-number']}}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="claim_question_43">
+                      Change
+                      <span class="govuk-visually-hidden">Medical officer or GP</span>
+                    </a>
+                  </dd>
+                </div>
+
+<dl/>
+
+    </div>
+  </div>
+
+  <h2 class="govuk-heading-m">Complete service details</h2>
+
+  <p>By completing the section you will return to the task list and can continue the application.</p>
+
+  <form action="claim_instructions_2" method="post" novalidate>
+
+    <input type="hidden" name="answers-checked" value="true">
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Complete section
+    </button>
+
+  </form>
+{% endblock %}

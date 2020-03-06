@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="payment_question_3">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="payment_check_your_answers" method="post">
+<span class="govuk-caption-xl">Question 3 of 3</span>
+          <h1 class="govuk-heading-xl">Please provide details of your accounts outside the UK</h1>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="name-on-the-account">
+              Name of account holder exactly as it is shown on the cheque book, bank card or statement
+            </label>
+            <input class="govuk-input" id="overseas_account_name" name="overseas_account_name" type="text" spellcheck="false" value={{data['overseas_account_name']}}>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="overseas_bank_name">
+              Name of bank
+            </label>
+            <input class="govuk-input" id="overseas_bank_name" name="overseas_bank_name" type="text" spellcheck="false" value={{data['overseas_bank_name']}}>
+          </div>
+
+          <fieldset class="govuk-fieldset">
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      Bank building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+    </label>
+    <input class="govuk-input" id="overseas-address-line-1" name="overseas-address-line-1" type="text" autocomplete="address-line1" value={{data['overseas-address-line-1']}}>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-2">
+      <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+    </label>
+    <input class="govuk-input" id="overseas-address-line-2" name="overseas-address-line-2" type="text" autocomplete="address-line2" value={{data['overseas-address-line-2']}}>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-2">
+      <span class="govuk-visually-hidden">Building and street line 2 of 3</span>
+    </label>
+    <input class="govuk-input" id="overseas-address-line-3" name="overseas-address-line-3" type="text" autocomplete="address-line2" value={{data['overseas-address-line-3']}}>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-2">
+      <span class="govuk-visually-hidden">Building and street line 2 of 4</span>
+    </label>
+    <input class="govuk-input" id="overseas-address-line-4" name="overseas-address-line-4" type="text" autocomplete="address-line2" value={{data['overseas-address-line-4']}}>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-2">
+      <span class="govuk-visually-hidden">Building and street line 2 of 5</span>
+    </label>
+    <input class="govuk-input" id="overseas-address-line-5" name="overseas-address-line-5" type="text" autocomplete="address-line2" value={{data['overseas-address-line-5']}}>
+  </div>
+
+</fieldset>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="swift">
+    Swift
+  </label>
+  <input class="govuk-input" id="overseas_swift" name="overseas_swift" type="text" spellcheck="false" value={{data['overseas_swift']}}>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="branch_code">
+    Bank/Branch code (BSB code)
+  </label>
+  <input class="govuk-input" id="overseas_branch_code" name="overseas_branch_code" type="text" spellcheck="false" value={{data['overseas_branch_code']}}>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="overseas_transit_number">
+    Transit Routing Number
+  </label>
+  <input class="govuk-input" id="overseas_transit_number" name="overseas_transit_number" type="text" spellcheck="false" value={{data['overseas_transit_number']}}>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="name-on-the-account">
+    Type of account eg. saving/checking
+  </label>
+  <input class="govuk-input" id="overseas_acc_type" name="overseas_acc_type" type="text" spellcheck="false" value={{data['overseas_acc_type']}}>
+</div>
+
+
+
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+      </div>
+    </div>
+
+    {% endblock %}

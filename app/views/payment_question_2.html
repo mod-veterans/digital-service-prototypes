@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="payment_details_question_1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="payment_question_3" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Question 1 of 3</span>
+            <h1 class="govuk-heading-xl">Please indicate the payment frequency you would like?</h1>
+            </legend>
+
+            <h1 class="govuk-heading-m">Officers</h1>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="time" name="time" type="radio"  value="Monthly" {{ checked("time", "Monthly") }} >
+                <label class="govuk-label govuk-radios__label" for="time">
+                  Weekly
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="time" name="time" type="radio" value="Quarterly" {{ checked("time", "Quarterly") }}>
+                <label class="govuk-label govuk-radios__label" for="time">
+                  Quarterly
+                </label>
+              </div>
+
+<h1 class="govuk-heading-m">Other ranks</h1>
+<div class="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="time" name="time" type="radio"  value="Regular" {{ checked("time", "2-weekly") }} >
+    <label class="govuk-label govuk-radios__label" for="time">
+      2 weekly
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="time" name="time" type="radio" value="3 weekly" {{ checked("time", "3-weekly") }}>
+    <label class="govuk-label govuk-radios__label" for="time">
+      3 weekly
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="time" name="time" type="radio" value="4 weekly" {{ checked("time", "4-weekly") }}>
+    <label class="govuk-label govuk-radios__label" for="time">
+      4 weekly
+    </label>
+  </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+      </div>
+    </div>
+
+    {% endblock %}

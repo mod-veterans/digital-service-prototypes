@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Armed Forces Compensation and War Pension Scheme Application
+      </h1>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Check before you start
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="documents_you_need">
+                  Things to know before you start
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Your application
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="personal_details_check_your_answers" aria-describedby="eligibility-completed">
+                  Personal details
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="service_details_check_your_answers">
+                  Service details
+                </a>
+              </span>
+<strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="claim_check_your_answers">
+                  Your claim and medical details
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="other_compensation_question_1" >
+                  Other compensation
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="benefits_question_1" >
+                  About other benefits, allowances or entitlement
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="payment_details_question_1" >
+                  Your payment details
+                </a>
+              </span>
+
+            </li>
+
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Nominate a representative
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="nominate_representative_question_0">
+                  Nominate a representative
+                </a>
+              </span>
+            </li>
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">4. </span> Declaration and application submission
+              </h2>
+              <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="Declaration_2">
+                    Declaration and submission
+                  </a>
+                </span>
+              </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+    </div>
+  </div>
+
+{% endblock %}

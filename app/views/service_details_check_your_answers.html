@@ -1,0 +1,188 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="service_details_question_9">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers to the service details section</h1>
+
+      <h2 class="govuk-heading-m">Service details</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What was/is your full name in service
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['name-in-service'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_question_1">
+              Change
+              <span class="govuk-visually-hidden"> What was/is your full name in service</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your service number?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['service-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_question_2">
+              Change
+              <span class="govuk-visually-hidden"> What is your service number?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your service branch?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['service-branch'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_question_3">
+              Change
+              <span class="govuk-visually-hidden"> Service branch</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your service type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['service-type'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_question_4">
+              Change
+              <span class="govuk-visually-hidden">service type</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your rank if serving or rank on discharge
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['rank'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_question_5">
+              Change
+              <span class="govuk-visually-hidden">rank</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What was/is your trade
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['trade'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_question_6">
+              Change
+              <span class="govuk-visually-hidden">trade</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What was the date of your enlistment
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['enlistment-day']}} {{data['enlistment-month']}} {{data['enlistment-year']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_question_7">
+              Change
+              <span class="govuk-visually-hidden">Enlistment date</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What was the date of your discharge
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['discharge-day']}} {{data['discharge-month']}} {{data['discharge-year']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_question_8">
+              Change
+              <span class="govuk-visually-hidden">Discharge date</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Reason for discharge
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['discharge-reason']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_question_8">
+              Change
+              <span class="govuk-visually-hidden">Discharge reason</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is the address of your current/last service unit?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['address-line-1-service-unit']}} <br/> {{data['address-line-2-service-unit']}} <br/> {{data['address-town-service-unit']}} <br/>  {{data['address-county-service-unit']}} <br/>
+            {{data['address-postcode-service-unit']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_question_9">
+              Change
+              <span class="govuk-visually-hidden">Service unit address</span>
+            </a>
+          </dd>
+        </div>
+
+<dl/>
+<br/>
+
+
+
+    </div>
+  </div>
+
+  <h2 class="govuk-heading-m">Complete service details</h2>
+
+  <p>By completing the section you will return to the task list and can continue the application.</p>
+
+  <form action="task_list_service_details_done" method="post" novalidate>
+
+    <input type="hidden" name="answers-checked" value="true">
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Complete section
+    </button>
+
+  </form>
+{% endblock %}

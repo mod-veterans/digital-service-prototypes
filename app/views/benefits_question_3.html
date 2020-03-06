@@ -1,0 +1,100 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="benefits_question_2">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <script type="text/javascript">
+      function YesNoCheck(){
+        if (document.getElementById('DM2014yes').checked) {
+          document.getElementById('ifYes').style.display = 'block';
+        }
+        else document.getElementById('ifYes').style.display = 'none';
+      }
+      </script>
+
+
+      <form class="form" action="benefits_question_4" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question 3 of 5</span>
+          <h1 class="govuk-heading-xl">Have you received payment under the Diffuse Mesothelioma 2014 Scheme?</h1>
+          </legend>
+
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="DM2014yes" name="DM2014" type="radio" onclick="javascript:YesNoCheck();" value="yes" {{ checked("DM2014", "Yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="IIDB">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="DM2014No" name="DM2014" type="radio" onclick="javascript:YesNoCheck();" value="No" {{ checked("DM2014", "No") }}>
+                  <label class="govuk-label govuk-radios__label" for="IIDB">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group" id="ifYes" style="display:none">
+            <h1 class="govuk-heading-m" id="IIDB-claim" class="govuk-hint">
+              Please tell use the date and amount you were paid.
+            </h1>
+    <span id="passport-issued-hint" class="govuk-hint">
+      For example, 12 11 2007
+    </span>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="DM14_payday" name="DM14_payday" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['DM14_payday']}}>
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="DM14_paymonth" name="DM14_paymonth" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['DM14_paymonth']}}>
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="DM14_payyear" name="DM14_payyear" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['DM14_payyear']}}>
+        </div>
+      </div>
+      <div>
+        <label class="govuk-label" for="amount-paid">
+          Amount paid
+        </label>
+        <input class="govuk-input" id="amount-paid" name="amount-paid" type="text" value={{data['DM14_amount']}}>
+      </div>
+
+    </div>
+
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_claim_details_done">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">Question 1 of 8</span>
+      <h1 class="govuk-heading-xl">Are you claiming for or have you received compensation?</h1>
+<h1 class="govuk-heading-m">This includes  any compensation from MOD for criminal injuries or for civil negligence, or compensation from civil authorities in Great Britain and Northern Ireland for criminal injuries.
+</h1>
+
+<form class="form" action="other_compensation_question_2" method="post">
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="criminal" name="criminal" type="radio" value="yes" {{ checked("criminal", "yes") }}>
+          <label class="govuk-label govuk-radios__label" for="criminal">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="criminal" name="criminal" type="radio" value="no" {{ checked("criminal", "no") }}>
+          <label class="govuk-label govuk-radios__label" for="criminal">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+      </div>
+    </div>
+
+  <button class="govuk-button" data-module="govuk-button" >Continue</button>
+
+<form/>
+
+
+{% endblock %}

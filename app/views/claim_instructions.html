@@ -1,0 +1,34 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_service_details_done">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="claim_question_1a" method="post">
+
+      <h1 class="govuk-heading-xl">Claim and medical details</h1>
+
+<p>You can claim for more than one incident or accident. You can start a claim for you first incident below. You will be able to add a second incident at the end.</p>
+
+
+
+<br/>
+        <button class="govuk-button" data-module="govuk-button">Begin claim</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="service_details_question_7">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form" action="service_details_question_9" method="post">
+
+      <div class="govuk-form-group">
+<fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+<span class="govuk-caption-xl">Question 8 of 9</span>
+    <h1 class="govuk-fieldset__heading">
+      What was the date and reason for your discharge?
+    </h1>
+  </legend>
+  <br>
+  <span id="passport-issued-hint" class="govuk-hint" >
+    For example, 27 3 2007
+  </span>
+  <div class="govuk-date-input" id="discharge-date" >
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="discharge-day">
+          Day
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="discharge-day" name="discharge-day" type="number" pattern="[0-9]*" value={{data['discharge-day']}} >
+      </div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="discharge-month">
+          Month
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="discharge-month" name="discharge-month" type="number" pattern="[0-9]*" value={{data['discharge-month']}}>
+      </div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="discharge-year">
+          Year
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="discharge-year" name="discharge-year" type="number" pattern="[0-9]*" value={{data['discharge-year']}}>
+      </div>
+    </div>
+  </div>
+</fieldset>
+</div>
+
+<br>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="discharge-reason">
+Discharge reason
+</label>
+<input class="govuk-input" id="discharge-reason" name="discharge-reason" type="text" value={{data['discharge-reason']}}>
+</div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+    </div>
+  </div>
+
+{% endblock %}
