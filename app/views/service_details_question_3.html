@@ -1,0 +1,61 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="service_details_question_2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="service_details_question_4" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Question 3 of 5</span>
+            <h1 class="govuk-heading-xl">What is your service branch?</h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="service-branch" name="service-branch" type="radio"  value="Royal Navy" {{ checked("service-branch", "Royal Navy") }}>
+                <label class="govuk-label govuk-radios__label" for="service-branch">
+                  Royal Navy
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="service-branch" name="service-branch" type="radio" value="British Army" {{ checked("service-branch", "British Army") }}>
+                <label class="govuk-label govuk-radios__label" for="service-branch">
+                  British Army
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="service-branch" name="service-branch" type="radio" value="Royal Air Force" {{ checked("service-branch", "Royal Air Force") }}>
+                <label class="govuk-label govuk-radios__label" for="service-branch">
+                  Royal Air Force
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="service-branch" name="service-branch" type="radio" value="Royal Marines" {{ checked("service-branch", "Royal Marines") }}>
+                <label class="govuk-label govuk-radios__label" for="service-branch">
+                  Royal Marines
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

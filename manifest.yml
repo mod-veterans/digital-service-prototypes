@@ -1,0 +1,6 @@
+---
+    applications:
+    - name: afcs-prototype
+      memory: 64M
+      buildpacks:
+      - staticfile_buildpack

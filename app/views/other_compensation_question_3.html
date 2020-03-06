@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="other_compensation_question_2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">Question 3 of 8</span>
+      <h1 class="govuk-heading-xl">Claim outcome</h1>
+
+<form class="form" action="other_compensation_question_4" method="post">
+  <div class="govuk-form-group">
+  <h1 class="govuk-heading-m">What is the status or what was the outcome of the claim?</h1>
+    <span id="more-detail-hint" class="govuk-hint">
+      Please include any reference numbers and details of the person or organisation.
+    </span>
+    <textarea class="govuk-textarea" id="claim-outcome" name="claim-outcome" rows="5" aria-describedby="more-detail-hint" value={{data['claim-outcome']}}></textarea>
+  </div>
+
+
+<br/>
+  <h1 class="govuk-heading-m">Did you recieve a payment as a result of this claim?</h1>
+  <div class="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="payment-made" name="payment-made" type="radio"  value="yes" {{ checked("payment-made", "yes") }}>
+      <label class="govuk-label govuk-radios__label" for="payment-made">
+        Yes
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="payment-made" name="payment-made" type="radio" value="no" {{ checked("payment-made", "no") }}>
+      <label class="govuk-label govuk-radios__label" for="payment-made">
+        No
+      </label>
+    </div>
+  </div>
+</div>
+</div>
+
+<br/><br/>
+
+  <button class="govuk-button" data-module="govuk-button" >Continue</button>
+
+<form/>
+
+</div>
+</div>
+
+{% endblock %}

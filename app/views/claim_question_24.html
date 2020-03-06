@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_23">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="claim_question_25" method="post">
+
+        <span class="govuk-caption-xl">Question 24 of 43
+        </span>
+      <h1 class="govuk-heading-xl">How long were you exposed to this for?</h1>
+
+      <div class="govuk-form-group">
+    <label class="govuk-label" for="exposure-time">
+    Exposure time
+    </label>
+    <input class="govuk-input" id="exposure-time" name="exposure-time" type="text" value={{data['exposure-time']}}>
+
+
+    </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

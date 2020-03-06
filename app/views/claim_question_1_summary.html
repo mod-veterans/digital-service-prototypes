@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_1d">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Condition, injuries and illnesses summary</h1>
+
+      <h2 class="govuk-heading-m">List of conditions</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Condition 1
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['condition-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="claim_question_1a">
+              Change
+              <span class="govuk-visually-hidden">Condition 1</span>
+            </a>
+          </dd>
+
+<dl/>
+</div>
+</div>
+</div>
+
+<br/>
+
+<p>
+<a class="govuk-link" href="claim_question_1e">Add another condition, injury or illness</a>
+</p>
+
+      <form action="claim_question_2" method="post" novalidate>
+
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+
+{% endblock %}

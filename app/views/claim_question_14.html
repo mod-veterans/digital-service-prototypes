@@ -1,0 +1,58 @@
+apapp/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_13">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="claim_question_15" method="post">
+
+        <script type="text/javascript">
+          function YesCheck(){
+            document.getElementById("form").action = "claim_question_15"
+          }
+          function NoCheck(){
+            document.getElementById("form").action = "claim_question_20"
+          }
+      </script>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question 14 of 43 </span>
+          <h1 class="govuk-heading-xl">Was this accident due to sport, adventure training or physical training?</h1>
+          </legend>
+          <div class="govuk-radios" id="YesNo">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="activity-accident-yes" name="activity-accident" type="radio" onclick="javascript:YesCheck();" value="Yes" {{ checked("activity-accident", "Yes") }}>
+              <label class="govuk-label govuk-radios__label" for="activity-accident-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="activity-accident-no" name="activity-accident" type="radio" onclick="javascript:NoCheck();" value="No" {{ checked("activity-accident", "No") }}>
+              <label class="govuk-label govuk-radios__label" for="activity-accident-no">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+            </div>
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button" >Continue</button>
+
+<form/>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_start">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="personal_details_question_01" method="post">
+
+        <span class="govuk-caption-xl">Question 1 of 8</span>
+      <h1 class="govuk-heading-xl">What is your name?</h1>
+
+      <div class="govuk-form-group">
+  <label class="govuk-label" for="daytime-contact-number">
+    Title
+  </label>
+  <span id="more-detail-hint" class="govuk-hint">
+   For example; Mrs, Mr, Miss, Ms.
+ </span>
+  <input class="govuk-input govuk-!-width-one-third" id="title" name="title" type="text" value={{data['title']}}>
+
+
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="applicant-surname">
+Surname of family name
+</label>
+<input class="govuk-input" id="applicant-surnamer" name="applicant-surname" type="text" value={{data['applicant-surname']}}>
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="applicant-first-name">
+All other names in full
+</label>
+<input class="govuk-input" id="applicant-first-name" name="applicant-first-name" type="text" value={{data['applicant-first-name']}}>
+</div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

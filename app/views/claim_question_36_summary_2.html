@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_1d">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <form class="form" action="claim_question_37" method="post">
+
+      <h1 class="govuk-heading-xl">Hospital treatments</h1>
+
+      <h2 class="govuk-heading-m">List of hospital treatment</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Hospital treatment 1
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data[''] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden">Condition 1</span>
+            </a>
+          </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Hospital treatment 2
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data[''] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="#">
+                Change
+                <span class="govuk-visually-hidden">Condition 1</span>
+              </a>
+            </dd>
+
+<dl/>
+</div>
+</div>
+</div>
+
+<br/>
+
+<p>
+<a class="govuk-link" href="claim_question_33b">Add another condition, injury or illness</a>
+</p>
+
+      <form action="claim_question_2" method="post" novalidate>
+
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+
+{% endblock %}

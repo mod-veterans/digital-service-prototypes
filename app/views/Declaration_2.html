@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_payment_done">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">Question 1 of 2</span>
+      <h1 class="govuk-heading-xl">Consent for email correspondence</h1>
+
+      <form class="form" action="Declaration_1" method="post">
+
+        <p>Veterans UK is happy to conduct correspondence with customers using a nominated email address if that is their preference. There are some types of personal information we would not be able to include in email correspondence. Please read the information below.</p>
+
+        <p>I authorise Veterans UK to use email whenever possible in its correspondence with me using my nominated email address shown below. I accept that information including bank account details, National Insurance Numbers, medical details and any other information that could compromise my identity will not be included in emails.</p>
+
+        <p>I understand that correspondence transmitted by email may be open to abuse because it is transmitted over an unsecured network. I accept that the MOD will not be liable for any loss, interception or unauthorised use of information transmitted this way.</p>
+<p>If at any time in the future your email address should change then please tell us as soon as possible. Failure to tell us will result in Veterans UK being unable to release documents to you through the internet.</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-heading-xl">Do you wish to correspond by email?</h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="email-correspondence" name="email-correspondence" type="radio"  value="Yes" {{ checked("email-correspondence", "Yes") }}>
+                <label class="govuk-label govuk-radios__label" for="any-previous-claims">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="email-correspondence" name="email-correspondence" type="radio" value="No" {{ checked("email-correspondence", "No") }}>
+                <label class="govuk-label govuk-radios__label" for="any-previous-claims">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    Your email address
+  </label>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

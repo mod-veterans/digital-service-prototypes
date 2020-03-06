@@ -1,0 +1,40 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_9">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="claim_question_11" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question 10 of 43</span>
+          <h1 class="govuk-heading-xl">What was the route you took from start to the final destination?</h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <span id="road-reason" class="govuk-hint">
+              Information text.
+            </span>
+            <textarea class="govuk-textarea" id="road-route" name="road-route" rows="5" aria-describedby="more-detail-hint" value={{data['road-route']}}> </textarea>
+          </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+
+{% endblock %}

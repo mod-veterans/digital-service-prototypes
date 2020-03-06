@@ -1,0 +1,60 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_31">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="javascript:redirect()" method="post">
+
+      <script type="text/javascript">
+          function redirect(){
+            if (document.getElementById('hosp-treatment-yes').checked){
+              window.location.replace("claim_question_33");
+            }
+            else {
+              window.location.replace("claim_question_37");
+            }
+          }
+      </script>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question 32 of 43</span>
+          <h1 class="govuk-heading-xl">Did you recieve any hospital treatment for the injury, illness or condition?</h1>
+          </legend>
+          <div class="govuk-radios" id="YesNo">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hosp-treatment-yes" name="hosp-treatment" type="radio"  value="Yes" {{ checked("hosp-treatment", "Yes") }}>
+              <label class="govuk-label govuk-radios__label" for="downgraded">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hosp-treatment-no" name="hosp-treatment" type="radio" value="No" {{ checked("hosp-treatment", "No") }}>
+              <label class="govuk-label govuk-radios__label" for="downgraded">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+            </div>
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button" >Continue</button>
+
+<form/>
+
+{% endblock %}

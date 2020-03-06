@@ -1,0 +1,60 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_39">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="javascript:redirect()" method="post">
+
+      <script type="text/javascript">
+          function redirect(){
+            if (document.getElementById('awaiting-treatment-yes').checked){
+              window.location.replace("claim_question_41");
+            }
+            else {
+              window.location.replace("claim_question_43");
+            }
+          }
+      </script>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question 40 of 43</span>
+          <h1 class="govuk-heading-xl">Are you waiting for or have you recieved any other type of treatment for the condition, illness or injury you are claiming for?</h1>
+          </legend>
+          <div class="govuk-radios" id="YesNo">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="awaiting-treatment-yes" name="awaiting-treatment" type="radio"  value="Yes" {{ checked("awaiting-treatment", "Yes") }}>
+              <label class="govuk-label govuk-radios__label" for="awaiting-treatment">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="awaiting-treatment-no" name="awaiting-treatment" type="radio" value="No" {{ checked("awaiting-treatment", "No") }}>
+              <label class="govuk-label govuk-radios__label" for="awaiting-treatment">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+            </div>
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button" >Continue</button>
+
+<form/>
+
+{% endblock %}

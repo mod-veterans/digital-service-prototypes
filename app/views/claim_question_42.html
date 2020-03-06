@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_41">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="claim_question_43" method="post">
+
+          <span class="govuk-caption-xl">Question 42 of 43</span>
+        <h1 class="govuk-heading-xl">Please provide the full address of where you had this treatement?</h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+          Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+        </label>
+        <input class="govuk-input" id="other-treatment-line-1" name="other-treatment-line-1" type="text" autocomplete="address-line1" value={{data['other-treatment-line-1']}}>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+          <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+        </label>
+        <input class="govuk-input" id="other-treatment-line-2" name="other-treatment-line-2" type="text" autocomplete="address-line2" value={{data['other-treatment-line-2']}}>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="other-treatment-line-3" name="other-treatment-line-3" type="text" autocomplete="address-level2" value={{data['other-treatment-line-3']}}>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-county">
+          County
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="other-treatment-line-4" name="other-treatment-line-4" type="text" value={{data['other-treatment-line-4']}}>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="other-treatment-line-5" name="other-treatment-line-5" type="text" autocomplete="postal-code" value={{data['other-treatment-line-5']}}>
+      </div>
+
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+
+{% endblock %}

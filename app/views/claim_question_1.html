@@ -1,0 +1,90 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_service_details_done">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="claim_quesion_2" method="post">
+
+        <span class="govuk-caption-xl">Question 1 of </span>
+      <h1 class="govuk-heading-xl">Condition/injury/illness details</h1>
+
+      <div class="govuk-form-group">
+  <label class="govuk-label" for="condition-1">
+    What is the condition, injury or illness you are claiming for?
+  </label>
+  <input class="govuk-input" id="condition-1" name="condition-1" type="text" value={{data['condition-1']}}>
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="diagnosis">
+What is the medically confirmed diagnosis if known?
+</label>
+<input class="govuk-input" id="diagnosis" name="diagnosis" type="text" value={{data['diagnosis']}}>
+</div>
+
+
+<label class="govuk-label" for="onset-date">
+What was the onset date of your condition/injury or illness.
+</label>
+<span id="passport-issued-hint" class="govuk-hint" >
+For example, 27 3 2007
+</span>
+<div class="govuk-date-input" id="onset-day" >
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-date-input__label" for="onset-day">
+    Day
+  </label>
+  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="onset-day" name="onset-day" type="number" pattern="[0-9]*" value={{data['onset-day']}} >
+</div>
+</div>
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-date-input__label" for="onset-month">
+    Month
+  </label>
+  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="onset-month" name="onset-month" type="number" pattern="[0-9]*" value={{data['onset-month']}}>
+</div>
+</div>
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-date-input__label" for="onset-year">
+    Year
+  </label>
+  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="onset-year" name="onset-year" type="number" pattern="[0-9]*" value={{data['onset-year']}}>
+</div>
+</div>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Please explain why you feel it was caused by service?
+  </label>
+  <span id="more-detail-hint" class="govuk-hint">
+    You can provide more details of the condition, injury or illness in the following set of questions .
+  </span>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" value={{data['more-detail']}}> </textarea>
+</div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="service_details_question_4">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+            <form class="form" action="service_details_question_6" method="post">
+
+              <span class="govuk-caption-xl">Question 5 of 9</span>
+            <h1 class="govuk-heading-xl">What is your rank if serving or rank on discharge?</h1>
+
+            <div class="govuk-form-group">
+        <label class="govuk-label" for="rank">
+        </label>
+        <input class="govuk-input" id="rank" name="rank" type="text" value={{data['rank']}}>
+
+
+      </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

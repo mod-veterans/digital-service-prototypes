@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_declaration_done">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-xl">Question 1 of 3</span>
+      <h1 class="govuk-heading-xl">Nominate a representative</h1>
+
+      <p>If you wish to nominate a representative to hep you with your claim, please provide their details below.</p> <p>You can nominate a representative who may ask us how your claim is progressing. We can only give them this information if we have your written agreement. </p><p> When a decision on your claim is made, we will with your agreement, send a copy of the notification to your nominated representative.<p/> <p>Please be aware that the decision notification contains personal information. This may include details of your bank or building society account and any medical conditions  that we have considered as part of your claim. It may also show how we have calculated your award.</p>
+
+      <form class="form" id="form" action="nominate_representative_question_1" method="post">
+
+        <script type="text/javascript">
+            function YesCheck(){
+              document.getElementById("form").action = "nominate_representative_question_1"
+            }
+            function NoCheck(){
+              document.getElementById("form").action = "task_list_nominate_a_representative_done"
+            }
+        </script>
+
+<h1 class="govuk-heading-m">Would you like to nominate a representative?</h1>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" id="YesNo">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="nominateYes" name="nominate" type="radio" onclick="javascript:YesCheck();" value="Yes" {{ checked("nominate", "Yes") }}>
+                <label class="govuk-label govuk-radios__label" for="any-previous-claims">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="nominateNo" name="nominate" type="radio" onclick="javascript:NoCheck();" value="No" {{ checked("nominate", "No") }}>
+                <label class="govuk-label govuk-radios__label" for="any-previous-claims">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

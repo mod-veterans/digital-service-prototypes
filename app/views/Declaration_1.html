@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="Declaration_2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">Question 2 of 2</span>
+      <h1 class="govuk-heading-xl">Declaration</h1>
+
+      <form class="form" action="confirmation" method="post">
+
+        <p>I confirm that if I have signed a UKSF Confidentiality Contract, I have been careful not to make unauthorised disclosures. I have sought advice from the Disclosure Cell and have EPAW to make such statements.</p>
+  <p>  I confirm the information I have given is accurate and complete to the best of my knowledge and belief.</p>
+  <p> I understand that the information and personal data I have provided on this form, and any information and personal data I provide subsequently may be:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Used by the MOD in connection with my claim, or any subsequent reconsideration, review or appeal, under the Armed Forces Compensation Scheme (AFCS) or the Service Pensions Order (SPO) or any other schemes administered by Veterans UK.</li>
+  <li>Passed to any organisation contracted to provide medical services to the MOD and any qualified medical practitioner asked by the MOD to provide specialist advice</li>
+  <li>Passed to the DWP.</li>
+  <li>Used by the MOD and its agents in connection with all matters relating to this or future
+claims, or any subsequent reconsideration, review or appeal, under the AFCS or the SPO or other schemes administered by Veterans UK, and other claims against the MOD, and by other Government Departments, which have a legitimate interest in this information, for example, for the prevention and detection of crime.</li>
+</ul>
+
+<p class="govuk-body">I understand that</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>I must immediately tell the MOD of anything that may affect my entitlement to, or the amount of, an award under the AFCS, a war pension, a supplementary allowance or any survivors’ benefits paid under the SPO, or an award paid under any other scheme administered by Veterans UK, including any changes of address.</li>
+  <li>If I knowingly give false information, I may be liable to prosecution.</li>
+</ul>
+
+<p class="govuk-body">In order to process your application</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>The MOD and,</li>
+  <li>any doctor advising the MOD and,</li>
+    <li>any organisation contracted to provide medical services to the MOD and any doctor
+providing services to that organisation.</li>
+</ul>
+
+<p class="govuk-body">maybe required to contact</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>any doctor who has provided treatment and,</li>
+  <li>any hospital or similar place and,</li>
+    <li>anyone else who has provided investigation or treatment (such as a physiotherapist)</li>
+</ul>
+
+<p class="govuk-body">for copies of all medical records (including those in sealed envelopes) and any other information required to consider my claim, or any subsequent reconsideration, review or appeal, under the AFCS or the SPO or any other schemes administered by Veterans UK.</p>
+
+
+<p class="govuk-body">And that the MOD may</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Disclose medical records, and any information about my claim, or any subsequent reconsideration, review or appeal, under the AFCS or the SPO or any other schemes administered by Veterans UK, to any organisation contracted to provide medical services to the MOD and any qualified medical practitioner or consultant asked by the MOD to provide specialist advice. I also agree that the MOD may send copies of medical information obtained for the purposes of my claim, or any subsequent reconsideration, review or appeal, under the AFCS or the SPO or any other schemes administered by Veterans UK to my General Practitioner. I understand that the information will be retained by the MOD, either as a written record, or on a secure database, and may be used in future if it is necessary to reconsider or review my claim and any award made.</li>
+<br/>
+  <p class="govuk-body">I agree</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>To repay any sum paid as a result of this claim in the event that an overpayment is made for any reason.</li>
+  </ul>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            I have read and understood the declaration
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

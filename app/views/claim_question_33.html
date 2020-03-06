@@ -1,0 +1,38 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_32">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="claim_question_34" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question 33 of 43</span>
+          <h1 class="govuk-heading-xl">What injury or illness did you have treated?</h1>
+          </legend>
+
+            <span id="more-detail-hint" class="govuk-hint">
+              Information text.
+            </span>
+            <textarea class="govuk-textarea" id="what-injury-treated" name="what-injury-treated" rows="5" aria-describedby="more-detail-hint" value={{data['what-injury-treated']}}> </textarea>
+
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+
+{% endblock %}

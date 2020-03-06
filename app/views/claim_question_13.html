@@ -1,0 +1,66 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_12">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <script type="text/javascript">
+      function YesNoCheck(){
+        if (document.getElementById('witnessYes').checked) {
+          document.getElementById('ifYes').style.display = 'block';
+        }
+        else document.getElementById('ifYes').style.display = 'none';
+      }
+      </script>
+
+
+      <form class="form" action="claim_question_14" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question 13 of 43 </span>
+          <h1 class="govuk-heading-xl">Were any witnesses involved?</h1>
+          </legend>
+
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="witnessYes" name="witness" type="radio" onclick="javascript:YesNoCheck();" value="Yes" {{ checked("witness", "Yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="witness">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="witnessNo" name="witness" type="radio" onclick="javascript:YesNoCheck();" value="No" {{ checked("witness", "No") }}>
+                  <label class="govuk-label govuk-radios__label" for="witness">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <div class="govuk-form-group" id="ifYes" style="display:none">
+            <h1 class="govuk-heading-m" id="road-reason" class="govuk-hint">
+              Please provide details about any witnesses involved.
+            </h1>
+            <textarea class="govuk-textarea" id="witness-details-car" name="witness-details-car" rows="5" aria-describedby="more-detail-hint" value={{data['witness-details-car']}}> </textarea>
+          </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+
+{% endblock %}

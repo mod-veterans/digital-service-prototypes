@@ -1,0 +1,184 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="personal_details_question_5">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your anwers the personal details section</h1>
+
+      <h2 class="govuk-heading-m">Personal details</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your name?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['title'] }} <br/> {{ data['applicant-surname'] }} <br/> {{ data['applicant-first-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal_details_question_0">
+              Change
+              <span class="govuk-visually-hidden"> Applicant name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-line1-applicant'] }} <br/> {{ data['address-line2-applicant'] }} <br/> {{ data['address-level2-applicant'] }} <br/> {{ data['address-county'] }} <br/> {{ data['address-postcode'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal_details_question_01">
+              Change
+              <span class="govuk-visually-hidden">Applicant address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['DOB-day'] }} {{ data['DOB-month'] }} {{ data['DOB-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal_details_question_02">
+              Change
+              <span class="govuk-visually-hidden"> Date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Daytime contact number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['daytime-contact-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal_details_question_1">
+              Change
+              <span class="govuk-visually-hidden"> Daytime contact number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Alternative contact number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['alternative-contact-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal_details_question_1">
+              Change
+              <span class="govuk-visually-hidden"> alternative contact number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['national-insurance-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal_details_question_2">
+              Change
+              <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Any previous claims
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['any-previous-claims'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal_details_question_3">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Previous claim reference number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-claim-ref'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal_details_question_3">
+              Change
+              <span class="govuk-visually-hidden">Previous claim reference number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Armed Forces Pension Scheme
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['pension-type'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal_details_question_4">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Armed Forces Fast Payment
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['fast-payment'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal_details_question_5">
+              Change
+              <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+<dl/>
+
+</div>
+</div>
+
+      <h2 class="govuk-heading-m">Complete personal details</h2>
+
+      <p>By completing the section you will return to the task list and can continue the application.</p>
+
+      <form action="task_list_personal_details_done" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Complete section
+        </button>
+
+      </form>
+
+
+  </div>
+{% endblock %}

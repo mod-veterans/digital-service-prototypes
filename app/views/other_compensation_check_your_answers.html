@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="other_compensation_question_8">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers to the other compensation section</h1>
+
+      <h2 class="govuk-heading-m">Other compensation</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Criminal injuries or civil negligence
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['criminal'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="other_compensation_question_1">
+              Change
+              <span class="govuk-visually-hidden">Criminal injuries or negligence</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Other conditions you are claiming for
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['other-conditions'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="other_compensation_question_2">
+              Change
+              <span class="govuk-visually-hidden">Other conditions</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Outcome of other conditions claim
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['claim-outcome'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="other_compensation_question_3">
+              Change
+              <span class="govuk-visually-hidden">Claim outcome</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Did you recieve a payment as a result of this claim?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['payment-made'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="other_compensation_question_3">
+              Change
+              <span class="govuk-visually-hidden">Claim outcome</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Amount of payment you recieved
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['claim-amount'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="other_compensation_question_4">
+              Change
+              <span class="govuk-visually-hidden">Claim amount</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Type of payment recieved
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['payment-type'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="other_compensation_question_5">
+              Change
+              <span class="govuk-visually-hidden">Payment type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            When did you recieve this payment?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['payment-day'] }} {{ data['payment-month'] }} {{ data['payment-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="other_compensation_question_6">
+              Change
+              <span class="govuk-visually-hidden"> Payment day</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Did you have help from a solicitor
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['solicitor'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="other_compensation_question_7">
+              Change
+              <span class="govuk-visually-hidden"> Solicitor</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Solicitor contact details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['solictor-name'] }} <br/> {{ data['solictor-name-line-1'] }} <br/> {{ data['solictor-name-line-2'] }} <br/> {{ data['solictor-name-line-3'] }} <br/> {{ data['solictor-name-line-4'] }} <br/> {{ data['solictor-name-line-5'] }} <br/> {{ data['solictor-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="other_compensation_question_8">
+              Change
+              <span class="govuk-visually-hidden"> Solicitor contact details</span>
+            </a>
+          </dd>
+        </div>
+<dl/>
+
+</div>
+</div>
+
+<div>
+      <h2 class="govuk-heading-m">Complete other comepnsation section</h2>
+
+      <p>By completing the section you will return to the task list and can continue the application.</p>
+
+      <form action="task_list_other_compensation_done" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Complete section
+        </button>
+
+      </form>
+</div>
+
+  </div>
+{% endblock %}

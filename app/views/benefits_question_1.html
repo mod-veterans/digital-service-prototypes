@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_other_compensation_done">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-xl">Question 1 of 5</span>
+      <h1 class="govuk-heading-xl">Are you recieving any of the following?</h1>
+
+      <form class="form" action="benefits_question_2" method="post">
+
+        <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <span id="waste-hint" class="govuk-hint">
+        Select all that apply.
+      </span>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="Personal Independence Payment (PIP) or Disability Living Allowance (DLA)" name="Personal Independence Payment (PIP) or Disability Living Allowance (DLA)" type="checkbox" value="Personal Independence Payment (PIP) or Disability Living Allowance (DLA)" {{ checked("Personal Independence Payment (PIP) or Disability Living Allowance (DLA)", "Personal Independence Payment (PIP) or Disability Living Allowance (DLA)") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="PIP">
+            Personal Independence Payment (PIP) or Disability Living Allowance (DLA)
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="Income support" name="Income support" type="checkbox" value="Income support" {{ checked("Income support", "Income support") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="Income support">
+            Income support
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="Universal credit" name="Universal credit" type="checkbox" value="Universal credit" {{ checked("Universal credit", "Universal credit") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="Universal credit">
+            Universal credit
+          </label>
+        </div>
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Income-related Employment and Support Allowance (ESA)" name="Income-related Employment and Support Allowance (ESA)" type="checkbox" value="Income-related Employment and Support Allowance (ESA)" {{ checked("Income-related Employment and Support Allowance (ESA)", "Income-related Employment and Support Allowance (ESA)") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="Cold">
+              Income-related Employment and Support Allowance (ESA)
+            </label>
+          </div>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="Tax Credits paid to you or your family" name="Tax Credits paid to you or your family" type="checkbox" value="Tax Credits paid to you or your family" {{ checked("Tax Credits paid to you or your family", "Tax Credits paid to you or your family") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="Heat">
+                Tax Credits paid to you or your family
+              </label>
+            </div>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Housing Benefit and Council Tax Benefit" name="Housing Benefit and Council Tax Benefit" type="checkbox" value="Housing Benefit and Council Tax Benefit" {{ checked("Housing Benefit and Council Tax Benefit", "Housing Benefit and Council Tax Benefit") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="Housing Benefit and Council Tax Benefit">
+                  Housing Benefit and Council Tax Benefit
+                </label>
+              </div>
+
+                  </div>
+</fieldset>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
