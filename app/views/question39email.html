@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/questionwelfare">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+      <h1 class="govuk-fieldset__heading">
+        Consent for email correspondence
+      </h1>
+
+
+    </legend>
+
+    <br/>
+
+
+    <p>Veterans UK is happy to conduct correspondence with customers via a nominated email address if that is their preference. If you would like to be contacted this way, we need you to complete the details below.<p/>
+
+
+
+
+
+        <h3 class="govuk-heading-m">Do you wish to correspond by email?</h3>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+            </legend>
+
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Email address
+          </label>
+          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+<br/>
+
+
+
+
+<p>I authorise Veterans UK of the MOD to use email whenever possible in its correspondence with me via my nominated email address shown above. I accept that the information may include my personal details excluding bank accounts numbers, National Insurance numbers, medical details and any other information that could compromise my identity. </p>
+
+<p>I understand that correspondence transmitted by email may be open to abuse because it is transmitted over an unsecured network. I accept that the MOD will not be liable for ay loss, interception or unauthorised use of infmation transmitted this wau. I am content for Veterans UK to correspond with me from the email address as shown above.</p>
+<br/>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          I have read and understood the terms
+        </label>
+    </div>
+  </fieldset>
+</div>
+
+  </fieldset>
+</div>
+
+      <form class="form" action="/question38declaration" method="post">
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+<br/>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/question5phonenumber">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+  <span class="govuk-caption-xl">Question</span>
+      <h1 class="govuk-heading-xl">What is your email address?</h1>
+
+      <form class="form" action="/check-your-answersaboutyou" method="post">
+
+        <div class="govuk-form-group">
+
+          <span id="email-hint" class="govuk-hint">
+            For example: richard5967@gmail.com
+          </span>
+          <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

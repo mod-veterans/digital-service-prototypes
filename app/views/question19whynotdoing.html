@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/question18dates">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-xl">Question</span>
+      <h1 class="govuk-heading-xl">Why were you not doing this job before you joined the Armed Forces?</h1>
+
+      <form class="form" action="/check-your-answersaboutjobsbefore" method="post">
+
+        <div class="govuk-form-group">
+
+          <span id="more-detail-hint" class="govuk-hint">
+            [Guidance text to go here]
+          </span>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

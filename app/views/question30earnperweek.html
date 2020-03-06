@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/question29clock">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+
+
+<form class="form" action="/question31earnliving" method="post">
+
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+<span class="govuk-caption-xl">Question</span>
+      <h1 class="govuk-fieldset__heading">
+        How much do you earn per week?
+      </h1>
+    </legend>
+
+    <br/>
+
+<fieldset class="govuk-fieldset">
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-postcode">
+    GBP
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+  </div>
+
+</fieldset>
+
+
+
+
+  </fieldset>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+{% endblock %}

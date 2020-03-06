@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Things to know before you start</h1>
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+
+
+        <h3 class="govuk-heading-m">Changes to your personal circumstances</h3>
+
+              <p>You must let us know if your circumstances change. Some changes can affect your pension payments. If your circumstances change and you are not sure whether it will affect your pension, please get in touch. If you don't tell us as soon as possible that your circumstances have changed and you are overpaid, you will be expected to refund the amount overpaid.</p>
+
+        <p>If you are awarded an Allowance for Lowered Standard of Occupation (ALSO) and are subsequently awarded an attributable benefit from the Armed Forces Attrributable Benefit Scheme (AFAB) you must let us know. This is becuase the amount of ALSO payable to you may have been overpaid. You will be expected to refund any overpayment.</p>
+
+        <h3 class="govuk-heading-m">Changes you must tell us about</h3>
+
+        <p>If anything about yourself changes, please tell us straight away. Remember, if you are writing to us about something else we need to know about the changes that happen to them.</p>
+
+        <p>You must tell us if:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+        <li>you start work</li>
+        <li>you finish work</li>
+        <li>you change employer</li>
+        <li>your earnings increase (e.g. due to promotion, regular overtime)</li>
+        <li>your earnings reduce</li>
+        <li>you go into a National Health Service (NHS) hospital, NHS Trust hospital or Local Authority Care Home</li>
+        <li>you receive any Social Security Benefits</li>
+        <li>you receive a guaranteed income payment (GIP) under the Armed Forces Compensation Scheme (AFCS)</li>
+        <li>your Army pension/Government pension changes</li>
+        </ul>
+
+        <h3 class="govuk-heading-m">How the MOD collects and uses personal information</h3>
+
+ <p>The Ministry of Defence (MOD) is committed to protecting the privacy and security of your personal information and ensuring that all your personal data is processed in accordance with UK data protection legislation. The MOD Privacy notice contains the standards you can expect when we ask for, hold or share your personal information and your rights under the UK data protection legislation. </p>
+
+<p>Further information can be found here on the way the Veterans UK processes your data in line with the charter.</p>
+
+
+<h3 class="govuk-heading-m">Help and advice</h3>
+
+<p>If you need any help completing this form our Veternas Welsfare Service can help. Please see our contact details at the top of this form.</p>
+
+<p>If you need any further help or advice, please let us know.</p>
+
+
+              <a href="/task-list" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+                Start now
+                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                  <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                </svg>
+              </a>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

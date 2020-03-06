@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/question13leavejob">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+  <span class="govuk-caption-xl">Question</span>
+
+
+      <form class="form" Id="form" action="/check-your-answersaboutjobsbefore" method="post">
+
+        <script type="text/javascript">
+          function YesCheck(){
+            document.getElementById("form").action = "/check-your-answersaboutjobsbefore"
+          }s
+          function NoCheck(){
+            document.getElementById("form").action = "/question15regular"
+          }
+          </script>
+
+
+<h1 class="govuk-heading-xl">Was this your regular job?</h1>
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="commitment_marriage" name="commitment_type" type="radio" onclick="javascript:YesCheck();" value="Marriage" >
+        <label class="govuk-label govuk-radios__label" for="commitment_type">
+          Yes
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="commitment_civil" name="commitment_type" type="radio" onclick="javascript:NoCheck();" value="Civil Partnership" >
+        <label class="govuk-label govuk-radios__label" for="commitment_type">
+          No
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

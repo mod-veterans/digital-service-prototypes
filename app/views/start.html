@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Apply for an allowance for lowered standard of occupation
+      </h1>
+
+      <p>Please complete this form if you wish to claim an Allowance for Lowered Standard of Occupation:</p>
+      <p>To be entitled to an Allowance for Lowered Standard of Occupation </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your disability must make you permanently unable to do work that is, or was similar to your regular occupation,</li>
+        <li>you must be getting a War Pension at the 40% rate or higher, and</li>
+        <li>you must be under the age of 65 when you make your claim</li>
+      </ul>
+
+      <p>This allowance plus the basic War Pension cannot add up to more than 100% War Pension rate</p>
+
+      <p>You are not entitled to this allowance from the date you claimed your pension if you return this form within three months of the date shown on your notification of award.</p>
+
+<p>We will normally pay this allowance from the date you claimed your pension if you return this form within three months of the date shown on your notification of award.</p>
+
+<p>If you return this claim form more than three months after the date on your notification of award of pension, the allowance will normally be paid from the date you requested this form. Otherwise you will normally only be paid from this date we received your completed claim form.</p>
+
+
+    </div>
+
+  </div>
+
+
+    <form action="/beforeyoustart" method="post" novalidate>
+
+      <input type="hidden" name="answers-checked" value="true">
+
+
+
+    </form>
+
+                  <a href="/beforeyoustart" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+                    Continue
+                    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                      <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                    </svg>
+                  </a>
+
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+
+
+                  <div class="govuk-tabs" data-module="govuk-tabs">
+                      <h2 class="govuk-tabs__title">
+                        Contents
+                      </h2>
+                      <ul class="govuk-tabs__list">
+                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                          <a class="govuk-tabs__tab" href="#past-day">
+                            More information
+                          </a>
+                        </li>
+                        <li class="govuk-tabs__list-item">
+                          <a class="govuk-tabs__tab" href="#past-week">
+                            Other ways to apply
+                          </a>
+                        </li>
+
+                      </ul>
+                      <section class="govuk-tabs__panel" id="past-day">
+                        <h3 class="govuk-heading-m">Contact Veterans Welfare Service</h3>
+
+                  <p>If you need help completing your form then you can contact us using the details below</p>
+                  <p>Freephone (UK only): 0808 1914 218</p>
+                  <p>Telephone (overseas): +44 1253 866 043</p>
+                  <p>Email: veterans-uk@mod.gov.uk</p>
+
+                      </section>
+
+                      <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+                        <h3 class="govuk-heading-m">Apply using the paper form</h3>
+
+                  <a href="#" class="govuk-link">Access the paper form here</a>
+
+                  <br/>
+
+                  <p>You can fill in a paper version of this form and send it to</p>
+                  <p class="govuk-body govuk-!-margin-bottom-0">Veterans UK</p>
+                  <p class="govuk-body govuk-!-margin-bottom-0">War Pensions Scheme</p>
+                  <p class="govuk-body govuk-!-margin-bottom-0">Norcross</p>
+                  <p class="govuk-body govuk-!-margin-bottom-0">Thornton-Cleveleys</p>
+                  <p class="govuk-body govuk-!-margin-bottom-0">FY5 3WP</p>
+                  <p class="govuk-body govuk-!-margin-bottom-0">United Kingdom</p>
+
+                      </section>
+
+
+                    </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

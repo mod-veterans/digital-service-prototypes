@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/task-list7support">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Payslips and documents checklist</h1>
+
+      <form class="form" action="/confirmation" method="post">
+
+        <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    Please note that your application will not be processed until we receive your supporting documents
+  </strong>
+</div>
+
+        <p>You will need to ensure that the following certificates and documents are posted to us inorder to complete your Allowance for Lowered Standard of Occupation:</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                your last 6 weeks' payslips or if you are paid monthly then your last 2 months' payslips (if you cannot send them we will contact your employer)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                if you are a business partner; a copy of partnership pages
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                if you are self employed; a copy of your latest tax return
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+      <br/>
+
+<p>If you have already sent the tax return to HM Revenue and Customs, please ask for a copy of the relevant pages and send them to us. Please do not send business accounts.</p>
+
+<p>This list will also be emailed to you after the form has been submitted.</p>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          I can confirm that I will post the payslips and documents stated above
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

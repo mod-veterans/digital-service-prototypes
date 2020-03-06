@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/question39email">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+      <h1 class="govuk-fieldset__heading">
+        Declaration
+      </h1>
+
+
+    </legend>
+
+    <br/>
+
+
+    <p>I confirm that the information I have given is accurate and complete to the best of my knowledge and belief.<p/>
+
+      <p>I understand that the information and personal data I have provided on this form, and any information and personal data I have provided subsequently may be:<p/>
+
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>used by the MOD in connection with my claim, or any subsequent reconsideration, review or appeal, under the Armed Forces Compensation Scheme (AFCS) or the Service Pensions Order (SPO) or any other schemes administered by Veterans UK</li>
+          <li>passed to any organisation contracted to provide medical services to the MOD and any qualified medical practitioner asked by the MOD to provide specialist advice</li>
+          <li>passed to the Department for Work and Pensions</li>
+          <li>used by the MOD and its agents in connection with all matters relating to this or future claims, or any subsequent reconsideration, review or appeal, under the AFCS or the SPO or other schemes administered by Veterans UK and other claims against the MOD, and by other Government Departments, which have a legitimate interest in this information for example, for the prevention and detection of crime</li>
+        </ul>
+
+        <p>I understand that</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>I must immediately tell the MOD of anything that may affect my entitlement to, or the amount of, an award under the AFCS, a war pension, a suplementary allowance or any survuvors' benefits paid under the SPO, or an award paid under any other scheme administered by Veterans UK, including any changes of address</li>
+<li> if I knowingly give false information, I may be liable to prosecution </li>
+            </ul>
+
+<p>In order to process your application</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>the MOD and</li>
+    <li>any doctor advising the MOD and</li>
+    <li>any organiation contracted to provide medical services to the MOD and any doctor providing services to that organisation</li>
+</ul>
+
+<p>May ask</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>any doctor who has provided treatment and</li>
+  <li>any hospital or similar place and</li>
+  <li>anyone else who has provided treatment (such as physiotherapist)</li>
+
+  </ul>
+
+  <p>for copies of all medical records (including those in sealed envolopes) and any other information required to consider my claim, or any subsequent reconsideration, review or appeal, under the AFCS or SPO or any other schemes administered by Veterans UK.</p>
+<p>and that the MOD may disclose medical records, and any information about my claim, or any subsequent reconsideration, review or appeal, under the AFCS or SPO or any other schemes administered by Veterans UK, to any organisation contracted to provide medical services to the MOD and any qualified medical practicioner or consultant asked by the MOD to provide specialist advice. I understand that the information will be retained by the MOD either as a written record, or on a secure database, and may be used in future if it is necessary to reconsider or review my claim and any award made.</p>
+
+<p>I agree</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>to refund any sum paid as a result of this claim in the event that an overpayment is made for any reason</li>
+
+</ul>
+
+<p>This is my claim for War Pension Scheme: Allowance for Lowered Standard of Occupation</p>
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          I have read and understood the declaration
+        </label>
+    </div>
+  </fieldset>
+</div>
+
+  </fieldset>
+</div>
+
+      <form class="form" action="/task-list7support" method="post">
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+<br/>
+
+    </div>
+  </div>
+
+{% endblock %}

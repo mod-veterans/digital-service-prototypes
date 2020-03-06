@@ -1,0 +1,204 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/question25-2reasonleaving">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check details of your job</h1>
+
+      <h2 class="govuk-heading-m">Job 1 details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What job
+          </dt>
+          <dd class="govuk-summary-list__value">
+          Lorem ipsum
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/juggling-balls">
+              Change
+              <span class="govuk-visually-hidden"> number of balls you can juggle</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name and address of employer
+          </dt>
+          <dd class="govuk-summary-list__value">
+            72 Guild Street
+            <br>London
+            <br>SE23 6FH
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/juggling-trick">
+              Change
+              <span class="govuk-visually-hidden"> your most impressive juggling trick</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Clock or payroll number
+          </dt>
+          <dd class="govuk-summary-list__value">
+1234567
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Dates worked there
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>12/05/18 - 14/10/19</p>
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Reason for leaving
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+      <h2 class="govuk-heading-m">Job 2 details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What job
+          </dt>
+          <dd class="govuk-summary-list__value">
+          Lorem ipsum dolor
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/juggling-balls">
+              Change
+              <span class="govuk-visually-hidden"> number of balls you can juggle</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name and address of employer
+          </dt>
+          <dd class="govuk-summary-list__value">
+            55 Brook Street
+            <br>London
+            <br>SE23 6FH
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/juggling-trick">
+              Change
+              <span class="govuk-visually-hidden"> your most impressive juggling trick</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Clock or payroll number
+          </dt>
+          <dd class="govuk-summary-list__value">
+  1234567
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Dates worked there
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>12/05/18 - 14/10/19</p>
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Reason for leaving
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+
+<a href="/question21whatjob" class="govuk-link govuk-link--no-visited-state">Add another job</a>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+
+      <h2 class="govuk-heading-m">Complete jobs section </h2>
+
+      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="/task-list3otherjobs" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/task-list5jobseeking">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-xl">Question</span>
+      <h1 class="govuk-heading-xl">Are you receiving or waiting to hear about any of the following benefits, allowances or entitlements? </h1>
+
+      <form class="form" Id="form" action="/question36officeaddress" method="post">
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+      <span id="waste-hint" class="govuk-hint">
+        Select all that apply.
+      </span>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Armed Forces Attributable Pension or Service Attaributable Pension
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Armed Forces Pension Scheme
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Employment and Support Allowance
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Income Support
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Jobseekers Allowance
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Reduced Earning Allowance
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Severe Disablement Allowance
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Universal Credit
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Armed Forces Compensation Scheme Guaranteed Income Payment
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Early Departure Payment
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Incapacity Benefit
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Industrial Injuries Benefit
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Pension Credit
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Service Invaliding Pension
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Training Allowance from the Jobcentre
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" onclick="javascript:YesCheck();" value="Yes">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Working Families Tax Credit
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+<br/>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
