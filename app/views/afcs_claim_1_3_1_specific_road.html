@@ -1,0 +1,38 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_claim_1_3_specific">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="afcs_claim_1_3_3_specific_road" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question </span>
+          <h1 class="govuk-heading-xl">What was the reason for your journey?</h1>
+          </legend>
+
+
+            <textarea class="govuk-textarea" id="journey-reason" name="journey-reason" rows="5" aria-describedby="more-detail-hint" value={{data['journey-reason']}}> </textarea>
+
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+{% endblock %}

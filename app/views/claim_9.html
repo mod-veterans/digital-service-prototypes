@@ -1,0 +1,95 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_7">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="claim_14" method="post">
+
+        <span class="govuk-caption-xl">Question</span>
+      <h1 class="govuk-heading-xl">Medical diagnosis details</h1>
+
+<h3 class="govuk-heading-m">Which specific medical diagnosis have you been given?</h3>
+<div class="govuk-form-group">
+<label class="govuk-label" for="diagnosis-1">
+Medical diagnosis (if known)
+</label>
+<input class="govuk-input" id="diagnosis-1" name="diagnosis-1" type="text" value={{data['diagnosis-1']}}>
+</div>
+<br/>
+<h3 class="govuk-heading-m">Which medical practioner gave this diagnosis?</h3>
+<span id="passport-number-hint" class="govuk-hint">
+            By this we mean your Medical Officer, GP, Hospital or other practitioner
+          </span>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="address-line-1">
+  Name (if known) <span class="govuk-visually-hidden">line 1 of 2</span>
+  </label>
+<input class="govuk-input" id="name-medical-assistance-2" name="name-medical-assistance-2" type="text" value={{data['name-medical-assistance-2']}}>
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="address-line-1">
+Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+</label>
+<input class="govuk-input" id="practitioner-diagnosis-line-1" name="practitioner-diagnosis-line-1" type="text" autocomplete="address-line1" value={{data['practitioner-diagnosis-line-1']}}>
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="address-line-2">
+<span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+</label>
+<input class="govuk-input" id="practitioner-diagnosis-line-2" name="practitioner-diagnosis-line-2" type="text" autocomplete="address-line2" value={{data['practitioner-diagnosis-line-2']}}>
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="address-town">
+Town or city
+</label>
+<input class="govuk-input govuk-!-width-two-thirds" id="practitioner-diagnosis-line-3" name="practitioner-diagnosis-line-3" type="text" autocomplete="address-level2" value={{data['practitioner-diagnosis-line-3']}}>
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="address-county">
+County
+</label>
+<input class="govuk-input govuk-!-width-two-thirds" id="practitioner-diagnosis-line-4" name="practitioner-diagnosis-line-4" type="text" value={{data['practitioner-diagnosis-line-4']}}>
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="address-postcode">
+Postcode
+</label>
+<input class="govuk-input govuk-input--width-10" id="practitioner-diagnosis-line-5" name="practitioner-diagnosis-line-5" type="text" autocomplete="postal-code" value={{data['practitioner-diagnosis-line-5']}}>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="address-postcode">
+  Telephone number
+  </label>
+<input class="govuk-input" id="practitioner-diagnosis-number" name="practitioner-diagnosis-number" type="text" value={{data['practitioner-diagnosis-number']}}>
+
+
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_task_list_start">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" Id="form" action="claim_1_1_specific" method="post">
+
+        <script type="text/javascript">
+                    function YesCheck(){
+                      document.getElementById("form").action = "task_list_start"
+                    }
+                    function NoCheck(){
+                      document.getElementById("form").action = "afcs_task_list_start"
+                    }
+                </script>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                When did you first join the Armed Forces?
+              </h1>
+            </legend>
+            <br/>
+        </div>
+
+        <span id="location-dtails" class="govuk-hint" >
+      If you have had multiple service periods then please reference the very first time you joined.
+        </span>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" onclick="javascript:YesCheck();" value="government-gateway" aria-describedby="sign-in-item-hint" >
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+                  Before 6 April 2005
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" onclick="javascript:NoCheck();"  aria-describedby="sign-in-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+                  After 6 April 2005
+                </label>
+              </div>
+            </div>
+<br/>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

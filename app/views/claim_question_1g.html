@@ -1,0 +1,63 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_1f">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="claim_question_1_summary_2" method="post">
+
+        <span class="govuk-caption-xl">Question 1 of 43 (cont)</span>
+      <h1 class="govuk-heading-xl">What was the onset date of this condition/injury or illness?</h1>
+
+<span id="passport-issued-hint" class="govuk-hint" >
+For example, 27 3 2007
+</span>
+<div class="govuk-date-input" id="onset-day" >
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-date-input__label" for="onset-day-2">
+    Day
+  </label>
+  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="onset-day-2" name="onset-day-2" type="number" pattern="[0-9]*" value={{data['onset-day-2']}} >
+</div>
+</div>
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-date-input__label" for="onset-month-2">
+    Month
+  </label>
+  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="onset-month-2" name="onset-month-2" type="number" pattern="[0-9]*" value={{data['onset-month-2']}}>
+</div>
+</div>
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-date-input__label" for="onset-year-2">
+    Year
+  </label>
+  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="onset-year-2" name="onset-year-2" type="number" pattern="[0-9]*" value={{data['onset-year-2']}}>
+</div>
+</div>
+</div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

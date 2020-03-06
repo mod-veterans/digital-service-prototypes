@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_claim_15_2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="afcs_claim_15_4_1" method="post">
+
+          <span class="govuk-caption-xl">Question</span>
+        <h1 class="govuk-heading-xl">What is the hospital record number?</h1>
+
+        <div class="govuk-form-group">
+    <label class="govuk-label" for="category">
+      Hospital record number
+    </label>
+    <span id="account-number-hint" class="govuk-hint">
+  If you don't have the hospital record number and live in the UK, please provide your NHS number.
+</span>
+    <input class="govuk-input" id="hosp-record-number" name="hosp-record-number" type="text" value={{data['hosp-record-number']}}>
+
+
+
+  </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+        <br/>
+        <a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+      </div>
+    </div>
+
+
+{% endblock %}

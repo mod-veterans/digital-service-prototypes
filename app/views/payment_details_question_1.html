@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_benefits_done">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Your payment details</h1>
+
+      <h1 class="govuk-heading-m">Service personnel</h1>
+
+      <p class="govuk-body">If your claim is unsuccessful any payment details you provide here will be deleted within 24 hours.</p>
+
+    <p class="govuk-body">Payments under the AFCS - For serving personnel, payment will be made into the same account as you pay. If you have any salary splitting instructions in place then you will need to review this.</p>
+
+      <h1 class="govuk-heading-m">All ex-service personnel</h1>
+
+      <p class="govuk-body">Payment will be made directly in a bank, building society or other account. Many banks and building societies will let you collect cash at the post office</p>
+
+<br/>
+
+
+
+      <form class="form" action="payment_question_3" method="post">
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

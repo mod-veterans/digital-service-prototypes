@@ -1,0 +1,40 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_personal_details_question_2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="afcs_personal_details_question_4" method="post">
+
+        <span class="govuk-caption-xl">Question 2 of 6</span>
+      <h1 class="govuk-heading-xl">What is your phone number?</h1>
+
+      <div class="govuk-form-group">
+        <span id="event-name-hint" class="govuk-hint">
+          We'll use this to contact you if we have an questions about your claim.
+        </span>
+  <input class="govuk-input" id="daytime-contact-number" name="daytime-contact-number" type="text" value={{data['daytime-contact-number']}}>
+</div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+    </div>
+  </div>
+
+{% endblock %}

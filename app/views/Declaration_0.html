@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_payment_done">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">Question 1 of 3</span>
+      <h1 class="govuk-heading-xl">For completion by Veterans Welfare Service (VWS) or Authorised Agent only</h1>
+
+      <form class="form" action="declaration_2" method="post">
+
+        <h3 class="govuk-heading-m">
+          What is your reference number?
+        </h3>
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Reference number
+          </label>
+          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+        <h3 class="govuk-heading-m">
+          What are your office details?
+        </h3>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Name of department or organisation
+          </label>
+          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-2">
+              <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-town">
+              Town or city
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-county">
+              County
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-postcode">
+              Postcode
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+          </div>
+
+
+
+<br/>
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h3 class="govuk-heading-m">
+        When did the claimant first contact the VWS or ‘Authorised Agent’ about this claim?
+      </h3>
+    </legend>
+    <span id="passport-issued-hint" class="govuk-hint">
+      For example, 12 11 2007
+    </span>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+        <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+          Save and continue
+        </button>
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Skip this question
+        </button>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

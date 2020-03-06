@@ -1,0 +1,75 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="personal_details_question_1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <script type="text/javascript">
+      function YesNoCheck(){
+        if (document.getElementById('same_nameYes').checked) {
+          document.getElementById('ifYes').style.display = 'block';
+        }
+        else document.getElementById('ifYes').style.display = 'none';
+      }
+      </script>
+
+
+      <form class="form" action="service_details_question_3" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question 1 of 8</span>
+          <h1 class="govuk-heading-xl">Did you have a different name during this period of service?</h1>
+          </legend>
+
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="same_nameYes" name="same_name" type="radio" onclick="javascript:YesNoCheck();" value="Yes" {{ checked("same_name", "Yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="police">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="same_nameNo" name="same_name" type="radio" onclick="javascript:YesNoCheck();" value="No" {{ checked("same_name", "No") }}>
+                  <label class="govuk-label govuk-radios__label" for="police">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <div class="govuk-form-group" id="ifYes" style="display:none">
+
+                      <label class="govuk-label" for="applicant-surname">
+                      Surname or family name
+                      </label>
+                      <input class="govuk-input" id="new-first-name" name="new-first-name" type="text" value={{data['new-first-name']}}>
+
+<br/><br/><br/>
+                      <label class="govuk-label" for="applicant-first-name">
+                      All other names in full
+                      </label>
+                      <input class="govuk-input" id="new-surname" name="new-surname" type="text" value={{data['new-surname']}}>
+
+            </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_15_4_1">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+
+
+      <h1 class="govuk-heading-xl">Hospital treatments</h1>
+
+      <h2 class="govuk-heading-m">List of hospital treatment</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Hospital treatment 1
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data[''] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              View
+              <span class="govuk-visually-hidden">View</span>
+            </a>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Delete
+              <span class="govuk-visually-hidden">Delete</span>
+            </a>
+          </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+
+
+<dl/>
+</div>
+</div>
+</div>
+
+<br/>
+
+<p>
+<a class="govuk-link" href="#">Add details of another hospital treatment</a>
+</p>
+
+      <form action="claim_20" method="post" novalidate>
+
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+{% endblock %}

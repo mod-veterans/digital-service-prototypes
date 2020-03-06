@@ -1,0 +1,52 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_1_3_3_specific_activity">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="claim_1_3_5_specific_activity" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question </span>
+          <h1 class="govuk-heading-xl">Were any witnesses involved?</h1>
+          </legend>
+
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="witnessActivityYes" name="witness-activity" type="radio"  value="Yes" {{ checked("witness-activity", "Yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="witness">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="witnessNo" name="witness-activity" type="radio" value="No" {{ checked("witness-activity", "No") }}>
+                  <label class="govuk-label govuk-radios__label" for="witness">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+{% endblock %}

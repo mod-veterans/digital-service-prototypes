@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_other_compensation_question_5">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="afcs_other_compensation_question_7" method="post">
+
+            <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <span class="govuk-caption-xl">Question 6 of 8</span>
+          <h1 class="govuk-fieldset__heading">
+            When did you receive this payment?
+          </h1>
+        </legend>
+        <span id="passport-issued-hint" class="govuk-hint">
+          For example, 27 3 2007
+        </span>
+        <div class="govuk-date-input" id="payment">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="payment-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="payment-day" name="payment-day" type="number" pattern="[0-9]*" value={{data['payment-day']}}>
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="payment-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="payment-month" name="payment-month" type="number" pattern="[0-9]*" value={{data['payment-month']}}>
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="payment-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="payment-year" name="payment-year" type="number" pattern="[0-9]*" value={{data['payment-year']}}>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      </div>
+
+              <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+          </div>
+        </div>
+<br/>
+        <a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+      {% endblock %}

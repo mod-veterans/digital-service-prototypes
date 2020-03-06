@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_service_details_question_6">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers to your service details</h1>
+
+      <h2 class="govuk-heading-m">Service details</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Different name in service
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['same_name'] }} <br/> {{ data['change-name'] }} {{ data['change-surname'] }} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_service_details_question_2">
+              Change
+              <span class="govuk-visually-hidden"> What was/is your full name in service</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Service type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['service-type'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_service_details_question_4">
+              Change
+              <span class="govuk-visually-hidden">service type</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Trade
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['trade'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_service_details_question_6">
+              Change
+              <span class="govuk-visually-hidden">trade</span>
+            </a>
+          </dd>
+        </div>
+<dl/>
+
+    </div>
+  </div>
+
+
+  <h2 class="govuk-heading-m">Complete service details section</h2>
+
+  <p>By completing the section you will return to the task list and can continue the application.</p>
+
+  <form action="afcs_task_list_service_details_done" method="post" novalidate>
+
+    <input type="hidden" name="answers-checked" value="true">
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Complete section
+    </button>
+
+  </form>
+{% endblock %}

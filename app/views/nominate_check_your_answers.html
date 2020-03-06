@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="nominate_representative_question_2">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers to nominate a representative</h1>
+
+      <h2 class="govuk-heading-m">Nominate a representative</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you want to nominate a representative?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['nominate'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="nominate_representative_question_0">
+              Change
+              <span class="govuk-visually-hidden">Nominate</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact details of nominated representative
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['full-name-nominate'] }} <br/> {{ data['email-address-nominate'] }} <br/> {{ data['address-line-1-nominate'] }} <br/> {{ data['address-line-2-nominate'] }} <br/> {{ data['address-line-4-nominate'] }} <br/> {{ data['address-line-5-nominate'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="nominate_representative_question_1">
+              Change
+              <span class="govuk-visually-hidden">Nominate details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Information we can release to your representative
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['current-claim']}} <br/> {{data['future-claims']}}<br/>  {{data['decision-notification']}}<br/> {{data['decision-notification-2']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="nominate_representative_question_2">
+              Change
+              <span class="govuk-visually-hidden">Information we can release</span>
+            </a>
+          </dd>
+        </div>
+<dl/>
+
+</div>
+</div>
+
+<div>
+      <h2 class="govuk-heading-m">Complete the nominate a representative section</h2>
+
+      <p>By completing the section you will return to the task list and can continue the application.</p>
+
+      <form action="task_list_nominate_a_representative_done" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Complete section
+        </button>
+
+      </form>
+</div>
+
+  </div>
+{% endblock %}

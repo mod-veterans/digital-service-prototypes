@@ -1,0 +1,69 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_1_4_specific">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <script type="text/javascript">
+      function YesNoCheck(){
+        if (document.getElementById('reportYes').checked) {
+          document.getElementById('ifYes').style.display = 'block';
+        }
+        else document.getElementById('ifYes').style.display = 'none';
+      }
+      </script>
+
+
+      <form class="form" action="claim_1_6_specific" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question </span>
+          <h1 class="govuk-heading-xl">Was an incident report form completed?</h1>
+          </legend>
+
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="reportYes" name="report-completed" type="radio" onclick="javascript:YesNoCheck();" value="Yes" {{ checked("report-completed", "Yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="police">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="reportNo" name="report-completed" type="radio" onclick="javascript:YesNoCheck();" value="No" {{ checked("report-completed", "No") }}>
+                  <label class="govuk-label govuk-radios__label" for="police">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <div class="govuk-form-group" id="ifYes" style="display:none">
+
+<h1 class="govuk-heading-m">Please upload the incident report form if you have a copy</h1>
+  <label class="govuk-label" for="file-upload-1">
+    Upload a file
+  </label>
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+  </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+{% endblock %}

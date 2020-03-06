@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Verification details sent</h1>
+        <div class="govuk-panel__body">
+          We have sent a confirmation email to<br><strong>applicant-name@email.com</strong>
+        </div>
+      </div>
+
+      <p class="govuk-body">
+        We have sent you a confirmation email.
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+<p class="govuk-body">Veterans UK will now verify your identify and respond to you in 24 hours. If successfully identified as a member or veteran of the Armed Forces who can apply using our online service you will be sent an email with a link and code to access the online service. If unsuccessful you will receive an email about next steps.</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">
+I didn't receive a confirmation email
+</span>
+</summary>
+<div class="govuk-details__text">
+
+<p class="govuk-body">Please check your junk folder. You may need to wait five minutes after pressing submit for your email to appear.</p>
+
+<p class="govuk-body">If you still haven't received a confirmation email then you will need to submit another verification application</p>
+
+</div>
+</details>
+
+    </div>
+  </div>
+
+{% endblock %}

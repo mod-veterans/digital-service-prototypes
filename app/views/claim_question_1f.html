@@ -1,0 +1,44 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_service_details_done">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="claim_question_1g" method="post">
+
+        <span class="govuk-caption-xl">Question 1 of 43 (cont)</span>
+      <h1 class="govuk-heading-xl">What is the medically confirmed diagnosis if known?</h1>
+
+
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="diagnosis-2">
+Medical diagnosis (if known)
+</label>
+<input class="govuk-input" id="diagnosis-2" name="diagnosis-2" type="text" value={{data['diagnosis-2']}}>
+</div>
+
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

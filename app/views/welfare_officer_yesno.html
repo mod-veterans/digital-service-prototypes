@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="personal_details_question_6">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="Declaration_2" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-heading-xl">Has a Welfare Officer completed this form on your behalf?</h1>
+              </legend>
+
+
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="fast-payment" name="fast-payment" type="radio" value="yes" {{ checked("fast-payment", "yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="fast-payment">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="fast-payment" name="fast-payment" type="radio" value="no" {{ checked("fast-payment", "no") }}>
+                  <label class="govuk-label govuk-radios__label" for="fast-payment">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+        <br/>
+<a href="#" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+</div>
+
+    </div>
+
+{% endblock %}

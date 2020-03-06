@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_claim_15_3">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+ <span class="govuk-caption-xl">Question</span>
+        <h1 class="govuk-heading-xl">What were your treatment dates?</h1>
+
+          <form class="form" action="afcs_claim_16" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Start date
+              </legend>
+              <span id="expiry-hint" class="govuk-hint">
+                For example, 31 3 1980
+              </span>
+              <div class="govuk-date-input" id="expiry">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-treatment-day" name="from-treatment-day" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['from-treatment-day']}}>
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-treatment-month" name="from-treatment-month" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['from-treatment-month']}}>
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-treatment-year" name="from-treatment-year" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['from-treatment-year']}}>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                End date
+              </legend>
+              <span id="expiry-hint" class="govuk-hint">
+                For example, 31 3 1980
+              </span>
+              <div class="govuk-date-input" id="expiry">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-treatment-day" name="to-treatment-day" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['to-treatment-day']}}>
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-treatment-month" name="to-treatment-month" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['to-treatment-month']}}>
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="expiry-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-treatment-year" name="to-treatment-year" type="text" pattern="[0-9]*" inputmode="numeric" value={{data['to-treatment-year']}}>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+<div>
+<a href="afcs_claim_15_4_2" class="govuk-link">Add another treatment date</a>
+</div>
+<br/>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+        <br/>
+        <a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

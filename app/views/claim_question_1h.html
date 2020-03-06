@@ -1,0 +1,42 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_question_1c">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="claim_question_1_summary_2" method="post">
+
+        <span class="govuk-caption-xl">Question 1 of 43 (cont)</span>
+      <h1 class="govuk-heading-xl">Please explain why you feel it was caused by service</h1>
+
+
+
+<div class="govuk-form-group">
+  <span id="more-detail-hint" class="govuk-hint">
+    You can provide more details of the condition, injury or illness in the following set of questions.
+  </span>
+  <textarea class="govuk-textarea" id="more-detail-2" name="more-detail-2" rows="5" aria-describedby="more-detail-hint" value={{data['more-detail-2']}}> </textarea>
+</div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_claim_question_33">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="afcs_claim_question_35b" method="post">
+
+          <span class="govuk-caption-xl">Question 34 of 43</span>
+        <h1 class="govuk-heading-xl">What were the details of this hospital treatment?</h1>
+        <div class="govuk-form-group">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          Name of consultant or clinic
+        </legend>
+      <input class="govuk-input" id="name-medical-assistance" name="name-medical-assistance" type="text" value={{data['name-medical-assistance']}}>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Address
+          </legend>
+          Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+        </label>
+        <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+          <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+        </label>
+        <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-county">
+          County
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+      </div>
+
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+        <br/>
+        <a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+      </div>
+    </div>
+
+
+{% endblock %}

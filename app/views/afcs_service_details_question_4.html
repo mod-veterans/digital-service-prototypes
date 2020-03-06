@@ -1,0 +1,56 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_service_details_question_2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="afcs_service_details_question_6" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Question 2 of 3</span>
+            <h1 class="govuk-heading-xl">What is/was your service type during this period of service?</h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="service-type" name="service-type" type="radio"  value="Regular" {{ checked("service-type", "Regular") }} >
+                <label class="govuk-label govuk-radios__label" for="service-type">
+                  Regular
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="service-type" name="service-type" type="radio" value="Reserve" {{ checked("service-type", "Reserve") }}>
+                <label class="govuk-label govuk-radios__label" for="service-type">
+                  Reserve
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="service-type" name="service-type" type="radio" value="Gurkhas" {{ checked("service-type", "Gurkhas") }}>
+                <label class="govuk-label govuk-radios__label" for="service-type">
+                  Gurkhas
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

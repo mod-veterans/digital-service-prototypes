@@ -1,0 +1,87 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="service_details_question_8">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form" action="service_details_1_check_your_answers" method="post">
+
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+<span class="govuk-caption-xl">Question 8 of 8</span>
+          <h1 class="govuk-fieldset__heading">
+            What is the address of your current/last service unit?
+          </h1>
+        </legend>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1-service-unit">
+            Name of service unit<span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="address-line-1-service-unit" name="address-line-1-service-unit" type="text" autocomplete="address-line1" value={{data['address-line-1-service-unit']}}>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1-service-unit">
+            Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="address-line-1-service-unit" name="address-line-1-service-unit" type="text" autocomplete="address-line1" value={{data['address-line-1-service-unit']}}>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-2-service-unit">
+            <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+          </label>
+          <input class="govuk-input" id="address-line-2-service-unit" name="address-line-2-service-unit" type="text" autocomplete="address-line2" value={{data['address-line-2-service-unit']}}>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town-service-unit">
+            Town or city
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-town-service-unit" name="address-town-service-unit" type="text" autocomplete="address-level2" value={{data['address-town-service-unit']}}>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county-service-unit">
+            County
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-county-service-unit" name="address-county-service-unit" type="text" value={{data['address-county-service-unit']}}>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode-service-unit">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode-service-unit" name="address-postcode-service-unit" type="text" autocomplete="postal-code" value={{data['address-postcode-service-unit']}}>
+        </div>
+
+
+        <a href="service_details_question_9_1" class="govuk-link govuk-link--no-visited-state">I don't know the address</a>
+        <br/><br/><br>
+
+      </fieldset>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+ </form>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

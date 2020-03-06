@@ -1,0 +1,75 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_claim_1_2_specific">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" Id="form" action="afcs_claim_1_3_1_specific_road" method="post">
+
+        <script type="text/javascript">
+            function RoadAccident(){
+              document.getElementById("form").action = "afcs_claim_1_3_1_specific_road"
+            }
+            function SportActivity(){
+              document.getElementById("form").action = "afcs_claim_1_3_1_specific_activity"
+            }
+            function Other(){
+              document.getElementById("form").action = "afcs_claim_1_3_1_specific_other"
+            }
+        </script>
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Question</span>
+              <h1 class="govuk-fieldset__heading">
+                Was this incident or accident the result of;
+              </h1>
+            </legend>
+            <br/>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="road_accident-yes" name="type_accident" type="radio" onclick="javascript:RoadAccident();" value="road_accident" {{ checked("type_accident", "Road accident") }}>
+                <label class="govuk-label govuk-radios__label" for="road_accident">
+                  A road accident
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sporting_accident" name="type_accident" type="radio" onclick="javascript:SportActivity();" value="sporting_accident" {{ checked("type_accident", "Road accident") }}>
+                <label class="govuk-label govuk-radios__label" for="sporting_accident">
+                  A sporting activity, adventure training or physical training
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="other_accident" name="type_accident" type="radio" onclick="javascript:Other();" value="other_accident" {{ checked("type_accident", "Road accident") }}>
+                <label class="govuk-label govuk-radios__label" for="other_accident">
+                  Other
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+      <a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+    </div>
+  </div>
+
+
+{% endblock %}

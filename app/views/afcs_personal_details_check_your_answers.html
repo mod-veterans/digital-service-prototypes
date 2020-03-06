@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="personal_details_question_7">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers the personal details section</h1>
+
+      <h2 class="govuk-heading-m">Personal details</h2>
+
+      <dl class="govuk-summary-list ">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+          {{ data['applicant-postcode'] }}<br/>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_personal_details_question_2_postcode_lookup">
+              Change
+              <span class="govuk-visually-hidden">Applicant address</span>
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['daytime-contact-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_personal_details_question_3">
+              Change
+              <span class="govuk-visually-hidden"> Daytime contact number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['national-insurance-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_personal_details_question_4">
+              Change
+              <span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Previous Armed Forces Compensation scheme or War Pension scheme claim
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['any-previous-claims'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_personal_details_question_5">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Previous claim reference number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-claim-ref'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_personal_details_question_5">
+              Change
+              <span class="govuk-visually-hidden">Previous claim reference number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Previous claim for Armed Forces Compensation Scheme Fast Payment
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['fast-payment'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_personal_details_question_6">
+              Change
+              <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Fast payment reference number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['fast-payment-ref'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_personal_details_question_6">
+              Change
+              <span class="govuk-visually-hidden">Previous claim reference number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address of Medical Officer or GP
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['GP-name'] }} <br/> {{ data['GP-line1'] }} <br/> {{ data['GP-line2'] }} <br/> {{ data['GP-line3'] }} <br/> {{ data['GP-line4'] }} <br/> {{ data['GP-line5'] }} <br/> {{ data['GP-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="afcs_personal_details_question_7">
+              Change
+              <span class="govuk-visually-hidden">Address of medical officer or GP</span>
+            </a>
+          </dd>
+        </div>
+<dl/>
+
+</div>
+</div>
+
+      <h2 class="govuk-heading-m">Complete personal details</h2>
+
+      <p>By completing the section you will return to the task list and can continue the application.</p>
+
+      <form action="afcs_task_list_personal_details_done" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Complete section
+        </button>
+
+      </form>
+
+
+  </div>
+{% endblock %}

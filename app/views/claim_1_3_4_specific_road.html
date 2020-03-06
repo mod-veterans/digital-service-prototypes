@@ -1,0 +1,80 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_1_3_5_specific_road">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <script type="text/javascript">
+      function YesNoCheck(){
+        if (document.getElementById('policeYes').checked) {
+          document.getElementById('ifYes').style.display = 'block';
+        }
+        else document.getElementById('ifYes').style.display = 'none';
+      }
+      </script>
+
+
+      <form class="form" action="claim_1_3_5_specific_road" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question </span>
+          <h1 class="govuk-heading-xl">Were the police involved?</h1>
+          </legend>
+
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="policeYes" name="police" type="radio" onclick="javascript:YesNoCheck();" value="Yes" {{ checked("police", "Yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="police">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="policeNo" name="police" type="radio" onclick="javascript:YesNoCheck();" value="No" {{ checked("police", "No") }}>
+                  <label class="govuk-label govuk-radios__label" for="police">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <div class="govuk-form-group" id="ifYes" style="display:none">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="event-name">
+                Name of police force (if known)
+              </label>
+              <input class="govuk-input" id="police_name" name="police_name" type="text" value={{data['police_name']}}>
+            </div>
+
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="event-name">
+                Incident report number (if known)
+              </label>
+
+              <input class="govuk-input" id="police_number" name="police_number" type="text" value={{data['police_number']}}>
+            </div>
+
+          </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+{% endblock %}

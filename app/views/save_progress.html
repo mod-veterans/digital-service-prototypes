@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="index">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Saving your progress as you go
+      </h1>
+
+      <div class="govuk-inset-text">
+  Provide an email address and postcode and we'll save your progress as you go. You can return at any point over the next 3 months to pick up where you left off.
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="account-number">
+    Email address
+  </label>
+  <span id="account-number-hint" class="govuk-hint">
+    We'll send you an email with instructions on how to return to your application
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="account-number" name="account-number" type="text" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric" spellcheck="false">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="account-number">
+  Enter the applicant's postcode
+  </label>
+  <span id="account-number-hint" class="govuk-hint">
+    You'll need to enter this postcode when you return to your application
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="account-number" name="account-number" type="text" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric" spellcheck="false">
+</div>
+
+
+<a href="afcs_or_wps"> <button class="govuk-button" data-module="govuk-button">
+  Continue
+</button></a>
+
+
+<br/>
+
+<a href="task_list_start_don't_save" class="govuk-link govuk-link--no-visited-state">I don't want to save my progress as I go</a>
+
+    </div>
+  </div>
+
+{% endblock %}

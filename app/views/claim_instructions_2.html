@@ -1,0 +1,56 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_check_your_answers">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Claim and medical details</h1>
+
+    <dl class="govuk-summary-list ">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Claim 1
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['#'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="claim_check_your_answers">
+            View
+            <span class="govuk-visually-hidden"> Claim 1</span>
+          </a>
+        </dd>
+      </div>
+
+    <dl/>
+
+      <form class="form" action="task_list_claim_details_done" method="post">
+
+</div>
+</div>
+
+<p>You can claim for a different incident or ongoing condition by clicking make another claim or complete the section.</p>
+
+<div>
+<a href="#" class="govuk-link">Make another claim</a>
+</div>
+
+<br/>
+        <button class="govuk-button" data-module="govuk-button">Complete section</button>
+
+      </form>
+      <br/>
+      <a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+    </div>
+  </div>
+
+{% endblock %}

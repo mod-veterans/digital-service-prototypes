@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_claim_1_6_specific">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Details of condition, injuries and illnesses</h1>
+
+<p>Please add the conditions, injuries and illnesses related to the claim details that you have just provided.</p>
+
+</div>
+</div>
+
+
+<br/>
+
+<p>
+<a class="govuk-link" href="afcs_claim_7">Add a condition, injury or illness</a>
+</p>
+
+      <form action="claim_6_2" method="post" novalidate>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+{% endblock %}

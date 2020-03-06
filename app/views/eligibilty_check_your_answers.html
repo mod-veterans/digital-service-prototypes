@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="eligibility_3">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers to your verification details</h1>
+
+      <h2 class="govuk-heading-m">Verification details</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['#'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="nominate_representative_question_0">
+              Change
+              <span class="govuk-visually-hidden">Nominate</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['#'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="nominate_representative_question_0">
+              Change
+              <span class="govuk-visually-hidden">Nominate</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Service number
+          </dt>
+          <dd class="govuk-summary-list__value">
+{{ data['#'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="nominate_representative_question_1">
+              Change
+              <span class="govuk-visually-hidden">Nominate details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['#'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="nominate_representative_question_2">
+              Change
+              <span class="govuk-visually-hidden">Information we can release</span>
+            </a>
+          </dd>
+        </div>
+<dl/>
+
+</div>
+</div>
+
+<div>
+      <h2 class="govuk-heading-m">Submit your verification details</h2>
+
+      <p>By submitting your verification details, Veterans UK will be able to verify your identify and respond to you in 24 hours</p>
+
+      <form action="eligibility_confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit verification details
+        </button>
+
+      </form>
+</div>
+
+  </div>
+{% endblock %}

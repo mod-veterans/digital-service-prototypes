@@ -1,0 +1,42 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_1_3_1_specific_road">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="claim_1_3_3_specific_road" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question</span>
+          <h1 class="govuk-heading-xl">What was the route you took from the start of your journey to the final destination?</h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <span id="location-dtails" class="govuk-hint" >
+              Please give details of the route taken for example road numbers M4, A585. Did you travel by a direct route and did you stop on the way?
+
+            </span>
+            <textarea class="govuk-textarea" id="road-route" name="road-route" rows="5" aria-describedby="more-detail-hint" value={{data['road-route']}}> </textarea>
+          </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+{% endblock %}

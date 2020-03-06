@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="index">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+      Enter a code
+      </h1>
+
+      <div class="govuk-inset-text">
+  Enter the code provided to you by email
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="account-number">
+    4 digit pin
+  </label>
+  <span id="account-number-hint" class="govuk-hint">
+    Enter the code provided to you on your confirmation email
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="account-number" name="account-number" type="text" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric" spellcheck="false">
+</div>
+
+
+<a href="start_application_1"><button class="govuk-button" data-module="govuk-button">
+  Continue
+</button></a>
+
+
+<br/>
+
+
+    </div>
+  </div>
+
+{% endblock %}

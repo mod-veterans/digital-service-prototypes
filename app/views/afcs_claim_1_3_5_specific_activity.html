@@ -1,0 +1,68 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_claim_question_18">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <script type="text/javascript">
+      function YesNoCheck(){
+        if (document.getElementById('treatmentYes').checked) {
+          document.getElementById('ifYes').style.display = 'block';
+        }
+        else document.getElementById('ifYes').style.display = 'none';
+      }
+      </script>
+
+
+      <form class="form" action="afcs_claim_1_4_specific" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">Question </span>
+          <h1 class="govuk-heading-xl">Did you go to A&E at the time of the injury?</h1>
+          </legend>
+
+
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="treatmentYes" name="treatment-activity" type="radio" onclick="javascript:YesNoCheck();" value="Yes" {{ checked("treatment-activity", "Yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="treatment">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="treatementNo" name="treatment-activity" type="radio" onclick="javascript:YesNoCheck();" value="No" {{ checked("treatment-activity", "No") }}>
+                  <label class="govuk-label govuk-radios__label" for="treatment">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <div class="govuk-form-group" id="ifYes" style="display:none">
+            <h1 class="govuk-heading-m" id="road-reason" class="govuk-hint">
+              Please provide details about the treatment you were given.
+            </h1>
+            <textarea class="govuk-textarea" id="treatment-details" name="treatment-details" rows="5" aria-describedby="more-detail-hint" value={{data['treatment-details']}}> </textarea>
+          </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+{% endblock %}

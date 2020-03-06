@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="eligibility_0">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="eligibility_2" method="post">
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <span class="govuk-caption-xl">Question 2 of 4</span>
+      <h1 class="govuk-fieldset__heading">
+        What is your date of birth?
+      </h1>
+    </legend>
+        <span id="passport-issued-hint" class="govuk-hint" >
+          For example, 05 01 1962
+        </span>
+        <div class="govuk-date-input" id="discharge-date" >
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="first-exposed">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="first-exposed-day" name="first-exposed-day" type="number" pattern="[0-9]*" value={{data['birthday-day']}} >
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="discharge-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="first-exposed-month" name="first-exposed-month" type="number" pattern="[0-9]*" value={{data['birthday-month']}}>
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="discharge-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="first-exposed-year" name="first-exposed-year" type="number" pattern="[0-9]*" value={{data['birthday-year']}}>
+            </div>
+          </div>
+    </fieldset>
+  </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_task_list_service_details_done">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" Id="form" action="afcs_claim_1_1_specific" method="post">
+
+        <script type="text/javascript">
+                    function YesCheck(){
+                      document.getElementById("form").action = "afcs_claim_1_1_specific"
+                    }
+                    function NoCheck(){
+                      document.getElementById("form").action = "afcs_claim_2_1_developed"
+                    }
+                </script>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Please select the option that applies to your claim:
+              </h1>
+            </legend>
+            <br/>
+        </div>
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" onclick="javascript:YesCheck();" value="government-gateway" aria-describedby="sign-in-item-hint" >
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+                  Specific incident or accident
+                </label>
+                <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  A condition, injury or illness that is the result of a specific accident or incident
+                </span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" onclick="javascript:NoCheck();"  aria-describedby="sign-in-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+                  Developed over a period of time
+                </label>
+                <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  A condition, injury or illness that started over a period of time and is not related to a specific incident or accident
+                </span>
+              </div>
+            </div>
+<br/>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_supporting_docs_done">Back</a>
+  <a href="application_saved" class="govuk-link save_progress">Save progress</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-xl">Upload supporting documents </h1>
+
+
+
+        <p>You can upload supporting documents and relevant evidence to support your claim. Below is a list of examples of documents you might want to upload that are related to you claim.</p>
+        <p>If you do not have copies of the documents we ask for, do not delay in submitting your claim form. You may send us additional information or documents later in the post.</p>
+
+<br/><br/>
+
+        <a href="document_upload"><button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+          Upload a file
+        </button><a/>
+
+
+
+<br/>
+<p class="govuk-body"><a href="task_list_supporting_docs_done" class="govuk-link govuk-link--no-visited-state">Return to task list</a></p>
+<br/>
+
+
+<h1 class="govuk-heading-m">Letters and reports from people who have treated you</h1>
+<ul class="govuk-list govuk-list--bullet">
+  <li>GPs</li>
+  <li>Hospital doctors</li>
+  <li>Specialist nurses</li>
+  <li>Psychiatrists or Psychologists at consultant grade</li>
+  <li>Occupational therapists</li>
+  <li>Physiotherapist</li>
+</ul>
+
+<h1 class="govuk-heading-m">Service documents such as</h1>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Unit/Company orders</li>
+  <li>Admin instructions</li>
+  <li>Authorisation papers</li>
+  <li>Accident report forms</li>
+  <li>Hurt certificates</li>
+  <li>Service medical records</li>
+</ul>
+
+<h1 class="govuk-heading-m">Medical test results including</h1>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Scans</li>
+  <li>Audiology</li>
+  <li>Reports of x-rays, but not the x-rays themselves</li>
+</ul>
+
+<h1 class="govuk-heading-m">Letters about payment of</h1>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Criminal injuries compensation</li>
+  <li>Civil negligence compensation</li>
+  <li>Industrial injuries disablement benefit</li>
+</ul>
+
+
+<h1 class="govuk-heading-m">Things we don't need to see</h1>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Appointment letters</li>
+  <li>General information about your medical conditions that are not about you personally</li>
+  <li>Fact sheets about your medication</li>
+  <li>Internet printouts</li>
+  <li>Letters about other benefits</li>
+</ul>
+
+<br/>
+
+
+    </div>
+  </div>
+
+{% endblock %}

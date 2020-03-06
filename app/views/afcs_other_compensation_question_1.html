@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_task_list_claim_details_done">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">Question 1 of 8</span>
+      <h1 class="govuk-heading-xl">Are you claiming for or have you received compensation?</h1>
+
+<p class ="govuk-body">This includes the MOD or civil authorities in Great Britain and Northern Ireland from any of the below:</p>
+
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>criminal injuries</li>
+  <li>civil negligence</li>
+  <li>compensation for criminal injures
+</ul>
+
+
+<form class="form" id="form" action="afcs_other_compensation_question_2" method="post">
+
+<script type="text/javascript">
+            function YesCheck(){
+              document.getElementById("form").action = "afcs_other_compensation_question_2"
+            }
+            function NoCheck(){
+              document.getElementById("form").action = "afcs_other_compensation_check_your_answers_no"
+            }
+        </script>
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="criminal" name="other-compensation" type="radio" onclick="javascript:YesCheck();" value="yes" {{ checked("other_compensation", "yes") }}>
+          <label class="govuk-label govuk-radios__label" for="criminal">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="criminal" name="other-compensation" type="radio" onclick="javascript:NoCheck();" value="no" {{ checked("other_compensation", "no") }}>
+          <label class="govuk-label govuk-radios__label" for="criminal">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+      </div>
+    </div>
+
+  <button class="govuk-button" data-module="govuk-button" >Continue</button>
+
+<form/>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+{% endblock %}

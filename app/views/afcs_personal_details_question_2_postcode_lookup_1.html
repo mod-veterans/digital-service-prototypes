@@ -1,0 +1,62 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_personal_details_question_2_postcode_lookup">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="afcs_personal_details_question_3" method="post">
+
+        <span class="govuk-caption-xl">Question 1 of 6</span>
+      <h1 class="govuk-heading-xl">What is your name?</h1>
+
+
+    <div class="govuk-form-group">
+
+        <label class="govuk-label" for="address-county-postcode">
+          Postcode
+        </label>
+
+    <p class="govuk-body"><strong> SW1A 1AA  &nbsp  &nbsp &nbsp </strong> <a href="personal_details_question_2_postcode_lookup" class="govuk-link govuk-link--no-visited-state">Change</a> </p>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+      Select an address
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published">2 addresses found</option>
+        <option value="published">Address 1, Street 1, SW1A 1AA</option>
+        <option value="updated" selected>Address 2, Street 2, SW1A 1AA</option>
+
+      </select>
+    </div>
+
+    <br/><br/>
+
+<a class="govuk-body" href="personal_details_question_2" class="govuk-link govuk-link--no-visited-state">I can't find my address in the list</a>
+<br/>
+<br/>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+<br/>
+
+
+
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_task_list_service_details_done">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="afcs_claim_0" method="post">
+
+      <h1 class="govuk-heading-xl">Claim and medical details</h1>
+
+<p> This form allows you to make multiple claims based on individual injuries, illnesses or conditions that have occured at different points in time as a result of your service.</p>
+
+  <p>For a specific accident or incident you can add all of the injuries and conditions sustained in a single claim.</p>
+
+        <button class="govuk-button" data-module="govuk-button">Add a claim</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

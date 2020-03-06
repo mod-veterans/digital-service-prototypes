@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_personal_details_question_3">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="afcs_personal_details_question_5" method="post">
+
+          <span class="govuk-caption-xl">Question 3 of 6</span>
+        <h1 class="govuk-heading-xl">What is your National Insurance number?</h1>
+
+
+                  <div class="govuk-form-group">
+                    <span id="national-insurance-number-hint" class="govuk-hint">
+                      You can find your National Insurance card, benefit letter, payslip or P60. <br/>For example, ‘QQ 12 34 56 C’.
+                    </span>
+                    <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value={{data['national-insurance-number']}}>
+                  </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block content %}
+
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+           <a href="application_saved" class="govuk-link save_progress">Save progress</a>
+           <a href="#" class="govuk-back-link">Back</a>
+
+      <h1 class="govuk-heading-xl">
+        Apply for compensation for a service-related injury or illness
+      </h1>
+
+
+      <div class="govuk-panel govuk-panel--info">
+
+      <p class = "whitetext">You can leave this application at any point and your progress will be saved. You can return to this application at any time until 26 May 2020 at 13:48</p>
+
+      </div>
+      <ol class="app-task-list">
+
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> About you
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="personal_details_check_your_answers" aria-describedby="eligibility-completed">
+                  Personal details
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="service_questions_summary">
+                  Service details
+                </a>
+              </span>
+<strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+            </ul>
+            </li>
+
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">2. </span> Your claim
+              </h2>
+              <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="claim_check_your_answers">
+                  Your claim and medical details
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+            </ul>
+            </li>
+
+
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">3. </span> Other details
+              </h2>
+              <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="other_compensation_check_your_answers" >
+                  Other compensation
+                </a>
+              </span>
+<strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="benefits_check_your_answers" >
+                  About other benefits, allowances or entitlement
+                </a>
+              </span>
+<strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+          </ul>
+          </li>
+
+
+                      <li>
+                        <h2 class="app-task-list__section">
+                          <span class="app-task-list__section-number">4. </span>Payment details
+                        </h2>
+                        <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="payment_details_question_1" >
+                  Your payment details
+                </a>
+              </span>
+<strong class="govuk-tag app-task-list__task-tag--not-started">Not started</strong>
+            </li>
+          </ul>
+          </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">5. </span> Nominate a representative
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="nominate_representative_question_0">
+                  Nominate a representative
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-tag--not-started">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">6. </span>Supporting documents
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="Documents_you_need">
+                  Supporting documents
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-tag--not-started">Not started</strong>
+              </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">7. </span> Declaration and application submission
+          </h2>
+          <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+                Declaration and submission
+            </span>
+          </li>
+          </ul>
+        </li>
+      </ol>
+
+    </div>
+  </div>
+
+{% endblock %}

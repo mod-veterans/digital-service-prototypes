@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="nominate_representative_question_1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-xl">Question 3 of 3</span>
+      <h1 class="govuk-heading-xl">Please tick the boxes below to tell us what information we can release to your representative.</h1>
+
+      <form class="form" action="nominate_check_your_answers" method="post">
+
+        <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <span id="waste-hint" class="govuk-hint">
+        Select all that apply.
+      </span>
+      <h1 class="govuk-heading-m">Current claim</h1>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="current-claim" name="current-claim" type="checkbox" value="current-claim" {{ checked("current-claim", "current-claim") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="current-claim">
+            Information on the present position
+          </label>
+
+        </div>
+        <br/>
+        <br/>
+        <h1 class="govuk-heading-m">Future claims or reviews</h1>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="future-claims" name="Duties" type="checkbox" value="future-claims" {{ checked("future-claims", "future-claims") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="future-claims">
+            Any documents relating to the claim
+          </label>
+          <br/>
+          <br/>
+        </div>
+        <h1 class="govuk-heading-m">Decision notification</h1>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="decision-notification" name="decision-notification" type="checkbox" value="decision-notification" {{ checked("decision-notification", "decision-notification") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="Training">
+            A copy of the decision notification
+          </label>
+          <br/>
+        </div>
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="decision-notification-2" name="decision-notification-2" type="checkbox" value="decision-notification-2" {{ checked("decision-notification-2", "decision-notification-2") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="Cold">
+              A decision notification for any future claim/review
+            </label>
+          </div>
+
+                  </div>
+                  </div>
+</fieldset>
+</div>
+<br/>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

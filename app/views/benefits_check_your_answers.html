@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="benefits_question_5">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers to other benefits, allowances and entitlements section</h1>
+
+      <h2 class="govuk-heading-m">Other benefits, allowances or entitlement</h2>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Other benefits, allowances or entitlements you are recieving
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['Personal Independence Payment (PIP) or Disability Living Allowance (DLA)'] }} <br/> {{ data['Income support'] }} <br/>  {{ data['Universal credit'] }} <br/>  {{ data['Income-related Employment and Support Allowance (ESA)'] }} <br/>  {{ data['Tax Credits paid to you or your family'] }} <br/>  {{ data['Housing Benefit and Council Tax Benefit'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="benefits_question_1">
+              Change
+              <span class="govuk-visually-hidden">PIP</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Industrial Injuries Disablement Benefit (IIDB)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['IIDB'] }} <br/> <br/> <p>Conditions:<p/> {{ data['IIDB-details'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="benefits_question_2">
+              Change
+              <span class="govuk-visually-hidden">IIDB</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Diffuse Mesothelioma Payment Scheme (DMPS)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['DM2014'] }} <br/> <br/>  <p>Date:</p>  {{ data['DM14_payday'] }}   {{ data['DM14_paymonth'] }}  {{ data['DM14_payyear'] }} <br/>  <br/>   <p>Amount paid:</p> {{ data['DM14_amount'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="benefits_question_3">
+              Change
+              <span class="govuk-visually-hidden">DM2014</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Diffuse Mesothelioma 2008 Scheme
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['DM2008'] }} <br/>  <br/>  <p>Date:</p> {{ data['DM08_payday'] }} {{ data['DM08_paymonth'] }} {{ data['DM08_payyear'] }} <br/> <br/>  <p>Amount paid:</p> {{ data['DM08_amount'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="benefits_question_4">
+              Change
+              <span class="govuk-visually-hidden">DM2008</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            The Workers Compensation 1979 Pneumoconiosis Act
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['TWCPA'] }} <br/> <br/>  <p>Date:</p>  {{ data['TWCPA_payday'] }}  {{ data['TWCPA_paymonth'] }} {{ data['TWCPA_payyear'] }} <br/>  <br/> <p>Amount paid:</p> {{ data['TWCPA_amount'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="benefits_question_5">
+              Change
+              <span class="govuk-visually-hidden">TWCPA</span>
+            </a>
+          </dd>
+        </div>
+
+<dl/>
+
+</div>
+</div>
+
+<div>
+      <h2 class="govuk-heading-m">Complete the benefits section</h2>
+
+      <p>By completing the section you will return to the task list and can continue the application.</p>
+
+      <form action="task_list_benefits_done" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Complete section
+        </button>
+
+      </form>
+</div>
+
+  </div>
+{% endblock %}

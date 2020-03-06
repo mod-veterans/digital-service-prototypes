@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="personal_details_question_2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="personal_details_question_4" method="post">
+
+          <script type="text/javascript">
+          function YesNoCheck(){
+            if (document.getElementById('any-previous-claimsYes').checked) {
+              document.getElementById('ifYes').style.display = 'block';
+            }
+            else document.getElementById('ifYes').style.display = 'none';
+          }
+          </script>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <span class="govuk-caption-xl">Question 3 of 8</span>
+              <h1 class="govuk-heading-xl">Have you made a WPS or AFCS claim previously?</h1>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="any-previous-claimsYes" name="any-previous-claims" type="radio" onclick="javascript:YesNoCheck();" value="Yes" {{ checked("any-previous-claims", "Yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="any-previous-claims">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="any-previous-claimsNo" name="any-previous-claims" type="radio" onclick="javascript:YesNoCheck();" value="No" {{ checked("any-previous-claims", "No") }}>
+                  <label class="govuk-label govuk-radios__label" for="any-previous-claims">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group" id="ifYes" style="display:none">
+            <label class="govuk-label" for="previous-claim-ref">
+              Please provide the reference number
+            </label>
+            <input class="govuk-input" id="previous-claim-ref" name="previous-claim-ref" type="text" value={{data['previous-claim-ref']}}>
+          </div>
+
+
+
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+</div>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

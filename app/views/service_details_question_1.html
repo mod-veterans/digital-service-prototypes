@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task_list_personal_details_done">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Service details</h1>
+
+      <h2 class="govuk-heading-m">Periods of service</h2>
+
+<p class="govuk-body">We need to collect some information about your service in case we cannot access your service records. <br/> <br/>  You can add details for more than one period of service. A period of service is defined as a term of service between enlistment and discharge within one service type.</p>
+
+</div>
+</div>
+
+<br/>
+
+<p>
+<a class="govuk-link" href="service_details_question_2">Add a period of service</a>
+</p>
+
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+      </form>
+
+
+{% endblock %}

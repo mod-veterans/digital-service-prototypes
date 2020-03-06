@@ -1,0 +1,103 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="service_details_question_7">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <script type="text/javascript">
+    function YesNoCheck(){
+      if (document.getElementById('same_nameYes').checked) {
+        document.getElementById('ifYes').style.display = 'block';
+      }
+      else document.getElementById('ifYes').style.display = 'none';
+    }
+    </script>
+
+
+    <form class="form" action="service_details_question_9" method="post">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <span class="govuk-caption-xl">Question 7 of 8</span>
+        <h1 class="govuk-heading-xl">Have you left this period of service?</h1>
+        </legend>
+
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="same_nameYes" name="same_name" type="radio" onclick="javascript:YesNoCheck();" value="Yes" {{ checked("same_name", "Yes") }}>
+                <label class="govuk-label govuk-radios__label" for="police">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="same_nameNo" name="same_name" type="radio" onclick="javascript:YesNoCheck();" value="No" {{ checked("same_name", "No") }}>
+                <label class="govuk-label govuk-radios__label" for="police">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+
+        <div class="govuk-form-group" id="ifYes" style="display:none">
+
+          <h3 class="govuk-heading-m">What was your discharge date?</h3>
+          <span id="passport-issued-hint" class="govuk-hint" >
+          For example, 27 3 2007
+          </span>
+          <div class="govuk-date-input" id="onset-day" >
+          <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="onset-day-2">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="discharge-day" name="discharge-day" type="number" pattern="[0-9]*" value={{data['discharge_day']}} >
+          </div>
+          </div>
+          <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="onset-month-2">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="discharge-month" name="discharge-month" type="number" pattern="[0-9]*" value={{data['discharge-month']}}>
+          </div>
+          </div>
+          <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="onset-year-2">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="discharge-year" name="discharge-year" type="number" pattern="[0-9]*" value={{data['discharge-year']}}>
+          </div>
+          </div>
+          </div>
+<br/><br/><br/>
+
+<h3 class="govuk-heading-m">What was your reason for discharge?</h3>
+                    <label class="govuk-label" for="applicant-first-name">
+                    Reason for discharge
+                    </label>
+                    <input class="govuk-input" id="discharge-reason" name="discharge-reason" type="text" value={{data['discharge-reason']}}>
+
+          </div>
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+<form/>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+{% endblock %}

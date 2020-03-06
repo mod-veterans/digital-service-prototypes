@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="benefits_question_5">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers to the payment details you provided</h1>
+
+      <h2 class="govuk-heading-m">Payment details</h2>
+
+
+      <dl class="govuk-summary-list ">
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Full name of bank, building society or other account provider
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['bank_name'] }} <br/> {{ data['account-holder-name'] }} <br/> {{ data['sort-code'] }} <br/> {{ data['account-number'] }} <br/> {{ data['roll-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="payment_question_3">
+              Change
+              <span class="govuk-visually-hidden">UK bank</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Overseas bank details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['overseas_account_name'] }} <br/>   {{ data['overseas_bank_name'] }} <br/>   {{ data['overseas-address-line-1'] }} <br/>   {{ data['overseas-address-line-2'] }} <br/>   {{ data['overseas-address-line-3'] }} <br/>   {{ data['overseas-address-line-4'] }} <br/>   {{ data['overseas-address-line-5'] }} <br/> {{ data['overseas_swift'] }} <br/> {{ data['overseas_branch_code'] }} <br/> {{ data['overseas_transit_number'] }} <br/> {{ data['overseas_acc_type'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="payment_question_4">
+              Change
+              <span class="govuk-visually-hidden">Overseas_bank_account</span>
+            </a>
+          </dd>
+        </div>
+
+
+<dl/>
+
+</div>
+</div>
+
+<div>
+      <h2 class="govuk-heading-m">Complete payment details section</h2>
+
+      <p>By completing the section you will return to the task list and can continue the application.</p>
+
+<form action="task_list_payment_done" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Complete section
+        </button>
+
+      </form>
+</div>
+
+  </div>
+{% endblock %}

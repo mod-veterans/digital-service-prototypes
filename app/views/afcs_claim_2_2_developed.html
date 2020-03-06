@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_claim_2_1_developed">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-xl">Question </span>
+      <h1 class="govuk-heading-xl">Do you think the injury/illness/condition was due to any of the following?</h1>
+
+      <form class="form" action="afcs_claim_2_3_developed" method="post">
+
+        <script type="text/javascript">
+        function YesNoCheck(){
+          if (document.getElementById('chemYes').checked) {
+            document.getElementById('ifYes').style.display = 'block';
+          }
+          else document.getElementById('ifYes').style.display = 'none';
+        }
+        </script>
+
+        <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <span id="waste-hint" class="govuk-hint">
+        Select all that apply.
+      </span>
+
+      <br/>
+      <p>Exposure to</p>
+
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="trade" name="trade" type="checkbox" onclick="javascript:YesNoCheck();" value="Trade" {{ checked("Trade", "Trade") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="Trade">
+            Trade
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="Duties" name="Duties" type="checkbox" onclick="javascript:YesNoCheck();" value="Duties" {{ checked("Duties", "Duties") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="Duties">
+            Duties
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="Training" name="Training" type="checkbox" onclick="javascript:YesNoCheck();" value="Training" {{ checked("Training", "Training") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="Training">
+            Training
+          </label>
+        </div>
+
+<br/>
+<p>Exposure to</p>
+
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Cold" name="Cold" type="checkbox" onclick="javascript:YesNoCheck();" value="Cold" {{ checked("Cold", "Cold") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="Cold">
+              Cold
+            </label>
+          </div>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="Heat" name="Heat" type="checkbox" onclick="javascript:YesNoCheck();" value="Heat" {{ checked("Heat", "Heat") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="Heat">
+                Heat
+              </label>
+            </div>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Noise" name="Noise" type="checkbox" onclick="javascript:YesNoCheck();" value="Noise" {{ checked("Noise", "Noise") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="Noise">
+                  Noise
+                </label>
+              </div>
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="Vibration" name="Vibration" type="checkbox" onclick="javascript:YesNoCheck();" value="Vibration" {{ checked("Vibration", "Vibration") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="Vibration">
+                    Vibration
+                  </label>
+                </div>
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="chemYes" name="chem" type="checkbox" onclick="javascript:YesNoCheck();" value="Chemical, biological or hazadous substance" {{ checked("chem", "Chemical, biological or hazadous substance") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="waste">
+                      Chemical, biological or hazardous substances
+                    </label>
+                  </div>
+                  </div>
+
+</fieldset>
+</div>
+
+<div class="govuk-form-group" id="ifYes" style="display:none">
+  <h1 class="govuk-heading-m" id="substance-details" class="govuk-hint">
+    What were the chemical, biological or hazardous substances you were exposed to?
+  </h1>
+  <textarea class="govuk-textarea" id="substance-details" name="substance-details" rows="5" aria-describedby="more-detail-hint" value={{data['substance-details']}}> </textarea>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="service_details_1_check_your_answers">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Service details</h1>
+
+      <h2 class="govuk-heading-m">Periods of service</h2>
+
+
+      <p class="govuk-body">We need to collect some information about your service in case we cannot access your service records. <br/> <br/>  You can add details for more than one period of service. A period of service is defined as a term of service between enlistment and discharge within one service type.</p>
+
+      <dl class="govuk-summary-list ">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+             Service period 1
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['service-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_1_check_your_answers">
+              View
+              <span class="govuk-visually-hidden">Service periods</span>
+            </a>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="service_details_1_check_your_answers">
+              Delete
+              <span class="govuk-visually-hidden">Service periods</span>
+            </a>
+          </dd>
+
+<dl/>
+</div>
+</div>
+</div>
+
+<br/>
+
+<p>
+<a class="govuk-link" href="service_details_question_1">Add another period of service</a>
+</p>
+
+      <form action="task_list_service_details_done" method="post" novalidate>
+
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Complete section
+        </button>
+
+      </form>
+
+
+{% endblock %}

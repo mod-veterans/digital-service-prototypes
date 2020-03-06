@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="claim_6_1">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Condition, injuries and illnesses summary</h1>
+
+      <h2 class="govuk-heading-m">List of conditions</h2>
+
+
+<p>Please add another condition, injury or ilness that you would like to  make a claim for.</p>
+
+</div>
+</div>
+
+<br/>
+
+<p>
+<a class="govuk-link" href="claim_7">Add another condition, injury or illness</a>
+</p>
+<form action="claim_question_1_summary" method="post" novalidate>
+
+
+  <a href="save_progress"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Cancel
+  </button></a>
+
+</form>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="other_compensation_question_4">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">Question 5 of 8</span>
+      <h1 class="govuk-heading-xl">What type of payment was this?</h1>
+
+      <form class="form" action="other_compensation_question_6" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="payment-type" name="payment-type" type="radio" value="Interim settlement" {{ checked("payment-type", "Interim settlement") }}>
+                <label class="govuk-label govuk-radios__label" for="criminal">
+                  Interim settlement
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="payment-type" name="payment-type" type="radio" value="Final settlement" {{ checked("payment-type", "Final settlement") }}>
+                <label class="govuk-label govuk-radios__label" for="payment-type">
+                  Final settlement
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+  <button class="govuk-button" data-module="govuk-button" >Continue</button>
+
+<form/>
+<br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+{% endblock %}

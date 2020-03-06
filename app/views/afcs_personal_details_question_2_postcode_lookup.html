@@ -1,0 +1,57 @@
+app/pages/start.html{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_task_list_start">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="afcs_personal_details_question_2_postcode_lookup_1" method="post">
+
+        <span class="govuk-caption-xl">Question 1 of 6</span>
+      <h1 class="govuk-heading-xl">What is your contact address?</h1>
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-county-postcode">
+        Postcode
+      </label>
+      <span id="event-name-hint" class="govuk-hint">
+        We'll use this information to send you relevant communication about your claim.
+      </span>
+
+      <input class="govuk-input govuk-input--width-10" id="applicant-postcode" name="applicant-postcode" type="text" autocomplete="postal-code" value={{data['applicant-postcode']}}>
+    </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Find address</button>
+
+      </form>
+<br/>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I live outside the UK
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    If you live outside the UK you will need to <a href="personal_details_question_2<p>" class="govuk-link govuk-link--no-visited-state">enter your address manually</a>
+  </div>
+</details>
+
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+
+    </div>
+  </div>
+
+{% endblock %}

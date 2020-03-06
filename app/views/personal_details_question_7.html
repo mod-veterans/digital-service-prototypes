@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="personal_details_question_6">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">Question 6 of 6</span>
+      <h1 class="govuk-heading-xl">What is the address of your current Medical Officer or GP?</h1>
+
+      <form class="form" action="personal_details_check_your_answers" method="post">
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+            Name (if known)<span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="GP-name" name="GP-name" type="text" value={{data['GP-name']}}>
+        </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+            </label>
+            <input class="govuk-input" id="GP-address-1" name="GP-address-1" type="text" value={{data['GP-address-1']}}>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-2">
+              <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+            </label>
+            <input class="govuk-input" id="GP-address-2" name="GP-address-2" type="text" value={{data['GP-address-2']}}>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-town">
+              Town or city
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="GP-address-3" name="GP-address-3" type="text" value={{data['GP-address-3']}}>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-county">
+              County
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="GP-address-4" name="GP-address-4" type="text" value={{data['GP-address-4']}}>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-postcode">
+              Postcode
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="GP-address-5" name="GP-address-5" type="text"  value={{data['GP-address-5']}}>
+          </div>
+
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="address-postcode">
+                        Telephone number (if known)
+                      </label>
+                      <input class="govuk-input govuk-input--width-10" id="GP-number" name="GP-number" type="text" autocomplete="postal-code" value={{data['GP-number']}}>
+                    </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <br/>
+<a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+    </div>
+  </div>
+
+{% endblock %}

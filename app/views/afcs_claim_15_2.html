@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="afcs_claim_15_1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <form class="form" action="afcs_claim_15_3" method="post">
+
+          <span class="govuk-caption-xl">Question</span>
+        <h1 class="govuk-heading-xl">What were the details of this hospital treatment?</h1>
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+          Name of consultant or clinic (if known)
+        </label>
+      <input class="govuk-input" id="name-hosp-treatment" name="name-hosp-treatment" type="text" value={{data['name-hosp-treatment']}}>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+
+          Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+        </label>
+        <input class="govuk-input" id="hosp-treatment-line-1" name="hosp-treatment-line-1" type="text" autocomplete="address-line1" value={{data['hosp-treatment-line-1']}}>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+          <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+        </label>
+        <input class="govuk-input" id="hosp-treatment-line-2" name="hosp-treatment-line-2" type="text" autocomplete="address-line2" value={{data['hosp-treatment-line-2']}}>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="hosp-treatment-line-3" name="hosp-treatment-line-3" type="text" autocomplete="address-level2" value={{data['hosp-treatment-line-3']}}>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-county">
+          County
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="hosp-treatment-line-4" name="hosp-treatment-line-4" type="text" value={{data['hosp-treatment-line-4']}}>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="hosp-treatment-line-5" name="hosp-treatment-line-5" type="text" autocomplete="postal-code" value={{data['hosp-treatment-line-5']}}>
+      </div>
+
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+        <br/>
+        <a href="application_saved" class="govuk-link govuk-link--no-visited-state">Exit and return later</a>
+      </div>
+    </div>
+
+
+{% endblock %}
